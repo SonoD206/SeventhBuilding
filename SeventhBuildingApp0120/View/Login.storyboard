@@ -15,17 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="XNX-al-eh1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nihondenshiLogo2" translatesAutoresizingMaskIntoConstraints="NO" id="XtM-Hb-FcJ">
+                                <rect key="frame" x="62" y="164.5" width="290" height="163.5"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワードを入力してください" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-gg-Ffq">
+                                <rect key="frame" x="60" y="538" width="294" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iS0-aa-WHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18.5"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mf-W0-Peq">
+                                <rect key="frame" x="157" y="598" width="100" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedLoginButton:" destination="8PD-pC-cGB" eventType="touchUpInside" id="b3Z-yL-oj6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YUX-Vq-qu5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Mf-W0-Peq" firstAttribute="top" secondItem="LOl-gg-Ffq" secondAttribute="bottom" constant="20" id="0kY-9O-oyk"/>
+                            <constraint firstItem="YUX-Vq-qu5" firstAttribute="trailing" secondItem="LOl-gg-Ffq" secondAttribute="trailing" constant="60" id="3gr-Uq-m8A"/>
+                            <constraint firstItem="XtM-Hb-FcJ" firstAttribute="centerY" secondItem="XNX-al-eh1" secondAttribute="centerY" multiplier="0.55" id="9du-ZC-Ea8"/>
+                            <constraint firstItem="LOl-gg-Ffq" firstAttribute="top" secondItem="XtM-Hb-FcJ" secondAttribute="bottom" constant="210" id="VR9-fa-IXY"/>
+                            <constraint firstItem="0Mf-W0-Peq" firstAttribute="centerX" secondItem="XtM-Hb-FcJ" secondAttribute="centerX" id="WBQ-2t-bsa"/>
+                            <constraint firstItem="0Mf-W0-Peq" firstAttribute="leading" secondItem="YUX-Vq-qu5" secondAttribute="leading" constant="157" id="XdH-5d-gE4"/>
+                            <constraint firstItem="LOl-gg-Ffq" firstAttribute="centerX" secondItem="XtM-Hb-FcJ" secondAttribute="centerX" id="YRh-Wy-ris"/>
+                            <constraint firstItem="YUX-Vq-qu5" firstAttribute="trailing" secondItem="0Mf-W0-Peq" secondAttribute="trailing" constant="157" id="cSA-We-xCv"/>
+                            <constraint firstItem="XtM-Hb-FcJ" firstAttribute="centerX" secondItem="XNX-al-eh1" secondAttribute="centerX" id="htS-KX-K01"/>
+                            <constraint firstItem="XtM-Hb-FcJ" firstAttribute="width" secondItem="YUX-Vq-qu5" secondAttribute="width" multiplier="0.7" id="jvQ-bj-fz2"/>
+                            <constraint firstItem="XtM-Hb-FcJ" firstAttribute="height" secondItem="YUX-Vq-qu5" secondAttribute="height" multiplier="0.2" id="k68-Bd-S0f"/>
+                            <constraint firstItem="LOl-gg-Ffq" firstAttribute="leading" secondItem="YUX-Vq-qu5" secondAttribute="leading" constant="60" id="xFs-Fb-mhd"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="passwordInputTextField" destination="LOl-gg-Ffq" id="t11-SR-qhl"/>
                         <segue destination="ER2-a1-UKE" kind="presentation" identifier="MoveToHome" id="peB-Jv-zdg"/>
                         <segue destination="ZhU-Vq-Yhs" kind="presentation" identifier="MoveToMap" id="1tx-ZI-7UI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UF3-E6-l83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="152"/>
+            <point key="canvasLocation" x="244.92753623188409" y="151.33928571428569"/>
         </scene>
         <!--Map-->
         <scene sceneID="TBA-L8-nh2">
@@ -45,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="nihondenshiLogo2" width="264.52999877929688" height="205.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
