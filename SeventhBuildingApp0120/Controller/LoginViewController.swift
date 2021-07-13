@@ -10,8 +10,12 @@ import Lottie
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet private weak var passwordInputTextField: UITextField!
+    @IBOutlet private weak var missLoginMessageLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    
     let loginSuccessAnimationView = AnimationView()
-    @IBOutlet weak var passwordInputTextField: UITextField!
+    let password = "open2021"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +24,15 @@ class LoginViewController: UIViewController {
         
         setLottieAnimation()
         
-        //テキストフィールドに下線を追加
+        //passwordInputTextFieldに下線を追加
         let border = CALayer()
         let width = CGFloat(2.0)
         border.borderColor = UIColor.gray.cgColor
-        border.frame = CGRect(x: 0, y: passwordInputTextField.frame.size.height - width, width:  passwordInputTextField.frame.size.width, height: 1)
+        border.frame = CGRect(x: 0, y: passwordInputTextField.frame.size.height - width, width:  view.frame.size.width * 0.7, height: 1)
         border.borderWidth = width
         passwordInputTextField.layer.addSublayer(border)
+        
+        loginButton.settingButton()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -35,9 +41,25 @@ class LoginViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func tappedLoginButton(_ sender: UIButton) {
-        print("hoge")
-        startLottieAnimation()
+        if self.passwordInputTextField.text == password {
+            missLoginMessageLabel.isHidden = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.startLottieAnimation()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
+                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
+                    let HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! UITabBarController
+                    self.show(HomeViewController, sender: nil)
+                })
+            })
+        } else {
+            missLoginMessageLabel.isHidden = false
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -83,12 +105,4 @@ class LoginViewController: UIViewController {
         loginSuccessAnimationView.play()
     }
     
-}
-
-extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
 }

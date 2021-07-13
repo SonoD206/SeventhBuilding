@@ -30,6 +30,8 @@
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
 		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
+		7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */; };
+		7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34C97269D83740070A9D8 /* ButtonExtension.swift */; };
 		835FE08C6970DB85E8D84B8D /* Pods_SeventhBuildingApp0120.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B50BDD806729881F63A21D6 /* Pods_SeventhBuildingApp0120.framework */; };
 		D32B010D21267101A48C2D14 /* Pods_SeventhBuildingApp0120_SeventhBuildingApp0120UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5446AD25091DBF8C227996 /* Pods_SeventhBuildingApp0120_SeventhBuildingApp0120UITests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
+		7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		7FF34C97269D83740070A9D8 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		8B50BDD806729881F63A21D6 /* Pods_SeventhBuildingApp0120.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeventhBuildingApp0120.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5446AD25091DBF8C227996 /* Pods_SeventhBuildingApp0120_SeventhBuildingApp0120UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeventhBuildingApp0120_SeventhBuildingApp0120UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B366F5759A506733639812A5 /* Pods-SeventhBuildingApp0120-SeventhBuildingApp0120UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeventhBuildingApp0120-SeventhBuildingApp0120UITests.release.xcconfig"; path = "Target Support Files/Pods-SeventhBuildingApp0120-SeventhBuildingApp0120UITests/Pods-SeventhBuildingApp0120-SeventhBuildingApp0120UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 		7FF34C8E269D49D90070A9D8 /* Extention */ = {
 			isa = PBXGroup;
 			children = (
+				7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */,
+				7FF34C97269D83740070A9D8 /* ButtonExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -504,9 +510,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */,
 				7F5BE8E6269D1BB100EAF93D /* FloorTableViewCell.swift in Sources */,
 				7F5BE89E269D141E00EAF93D /* LoginViewController.swift in Sources */,
 				7F5BE868269D13CB00EAF93D /* AppDelegate.swift in Sources */,
+				7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */,
 				7F5BE8D7269D1B8800EAF93D /* HomeTableViewCell.swift in Sources */,
 				7F5BE8C8269D16DF00EAF93D /* FloorDetailViewController.swift in Sources */,
 				7F5BE86A269D13CB00EAF93D /* SceneDelegate.swift in Sources */,
