@@ -27,6 +27,8 @@
 		7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE8E5269D1BB100EAF93D /* FloorTableViewCell.xib */; };
 		7F5BE8ED269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */; };
 		7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */; };
+		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
+		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		7F5BE8E5269D1BB100EAF93D /* FloorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorTableViewCell.xib; sourceTree = "<group>"; };
 		7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 		7F5BE866269D13CB00EAF93D /* SeventhBuildingApp0120 */ = {
 			isa = PBXGroup;
 			children = (
+				7FB47FAD269D279900F0DDF4 /* Json */,
 				7F5BE8A9269D14AB00EAF93D /* Model */,
 				7F5BE8A8269D14A200EAF93D /* Controller */,
 				7F5BE8A7269D149B00EAF93D /* View */,
@@ -194,6 +199,15 @@
 				7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */,
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		7FB47FAD269D279900F0DDF4 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				7FB47FAF269D27C800F0DDF4 /* 404.json */,
+				7FB47FAE269D27C800F0DDF4 /* success.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,10 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5BE8CD269D16F300EAF93D /* FloorDetail.storyboard in Resources */,
+				7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */,
 				7F5BE8D8269D1B8800EAF93D /* HomeTableViewCell.xib in Resources */,
 				7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */,
 				7F5BE874269D13CD00EAF93D /* LaunchScreen.storyboard in Resources */,
 				7F5BE871269D13CD00EAF93D /* Assets.xcassets in Resources */,
+				7FB47FB0269D27C800F0DDF4 /* success.json in Resources */,
 				7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */,
 				7F5BE8C0269D164700EAF93D /* Map.storyboard in Resources */,
 				7F5BE8A3269D143400EAF93D /* Login.storyboard in Resources */,
