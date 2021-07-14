@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4RT-4q-f5B">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8PD-pC-cGB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,16 +11,16 @@
         <!--Login View Controller-->
         <scene sceneID="7EZ-ht-RuB">
             <objects>
-                <viewController id="8PD-pC-cGB" customClass="LoginViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="8PD-pC-cGB" customClass="LoginViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNX-al-eh1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nihondenshiLogo2" translatesAutoresizingMaskIntoConstraints="NO" id="XtM-Hb-FcJ">
-                                <rect key="frame" x="62" y="169" width="290" height="155"/>
+                                <rect key="frame" x="62" y="164.5" width="290" height="163.5"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワードを入力してください" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-gg-Ffq">
-                                <rect key="frame" x="62" y="529" width="290" height="40"/>
+                                <rect key="frame" x="62" y="533" width="290" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rUR-Kg-DAx"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Mf-W0-Peq">
-                                <rect key="frame" x="124" y="579" width="166" height="50"/>
+                                <rect key="frame" x="124" y="583" width="166" height="50"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <inset key="contentEdgeInsets" minX="-10" minY="10" maxX="-10" maxY="10"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワードが間違っています。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZE3-go-Ybf">
-                                <rect key="frame" x="41.5" y="434" width="331" height="20"/>
+                                <rect key="frame" x="41.5" y="438" width="331" height="20"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.13682415066927145" blue="0.2047318461356552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -73,25 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UF3-E6-l83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="428.98550724637687" y="150.66964285714286"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eNo-7R-a14">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4RT-4q-f5B" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cu1-Jr-fi6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8PD-pC-cGB" kind="relationship" relationship="rootViewController" id="xDQ-xA-L6n"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YTH-bE-8v9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-481.15942028985512" y="150.66964285714286"/>
+            <point key="canvasLocation" x="-864" y="150"/>
         </scene>
     </scenes>
     <resources>

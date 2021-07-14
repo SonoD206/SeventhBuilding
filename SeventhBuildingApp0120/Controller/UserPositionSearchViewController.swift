@@ -6,24 +6,46 @@
 //
 
 import UIKit
+import Lottie
 
 class UserPositionSearchViewController: UIViewController {
 
+    let indicatorAnimationView = AnimationView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setLottieAnimation()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
-    */
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        startLottieAnimation()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.show(LoginViewController, sender: nil)
+        })
+    }
+    
+    /// AnimationViewの初期設定
+    func setLottieAnimation(){
+        indicatorAnimationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width / 2, height: view.bounds.height / 4)
+        indicatorAnimationView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
+        indicatorAnimationView.contentMode = .scaleAspectFit
+        view.addSubview(indicatorAnimationView)
+    }
+    
+    /// ログイン時にアニメーションを動かす
+    func startLottieAnimation(){
+        let indicatorAnimation = Animation.named("indicator")
+        indicatorAnimationView.animation = indicatorAnimation
+        indicatorAnimationView.loopMode = .loop
+        indicatorAnimationView.play()
+    }
+    
 }
