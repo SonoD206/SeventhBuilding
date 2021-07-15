@@ -8,13 +8,12 @@
 import UIKit
 import Lottie
 
-class LoginViewController: UIViewController {
+class LoginViewController: LottieAnimationViewController {
     
     @IBOutlet private weak var passwordInputTextField: UITextField!
     @IBOutlet private weak var missLoginMessageLabel: UILabel!
     @IBOutlet private weak var loginButton: UIButton!
     
-    let loginSuccessAnimationView = AnimationView()
     let password = "open2021"
     
     override func viewDidLoad() {
@@ -45,15 +44,16 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    @IBAction func tappedLoginButton(_ sender: UIButton) {
+    @IBAction private func tappedLoginButton(_ sender: UIButton) {
         if self.passwordInputTextField.text == password {
             missLoginMessageLabel.isHidden = true
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.startLottieAnimation()
+                self.startLottieAnimation(name: "success", mode: .playOnce)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
                     let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                    let HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! UITabBarController
-                    self.show(HomeViewController, sender: nil)
+                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! UITabBarController
+                    self.show(homeViewController, sender: nil)
                 })
             })
         } else {
@@ -87,22 +87,6 @@ class LoginViewController: UIViewController {
     
     @objc func dismissKeyboard(){
         self.view.endEditing(true)
-    }
-    
-    /// AnimationViewの初期設定
-    func setLottieAnimation(){
-        loginSuccessAnimationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width / 2, height: view.bounds.height / 4)
-        loginSuccessAnimationView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
-        loginSuccessAnimationView.contentMode = .scaleAspectFit
-        view.addSubview(loginSuccessAnimationView)
-    }
-    
-    /// ログイン時にアニメーションを動かす
-    func startLottieAnimation(){
-        let successAnimaiton = Animation.named("success")
-        loginSuccessAnimationView.animation = successAnimaiton
-        loginSuccessAnimationView.loopMode = .playOnce
-        loginSuccessAnimationView.play()
     }
     
 }

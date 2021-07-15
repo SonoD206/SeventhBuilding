@@ -8,10 +8,8 @@
 import UIKit
 import Lottie
 
-class UserPositionSearchViewController: UIViewController {
+class UserPositionSearchViewController: LottieAnimationViewController {
 
-    let indicatorAnimationView = AnimationView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,28 +22,16 @@ class UserPositionSearchViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        startLottieAnimation()
+        startLottieAnimation(name: "indicator", mode:.loop)
         DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
+            
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
-            let LoginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            self.show(LoginViewController, sender: nil)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            self.show(loginViewController, sender: nil)
+            
+//            let storyboard = UIStoryboard(name: "MissUserSearch", bundle: nil)
+//            let missUserSearchViewController = storyboard.instantiateViewController(withIdentifier: "MissUserSearchViewController")
+//            self.show(missUserSearchViewController, sender: nil)
         })
     }
-    
-    /// AnimationViewの初期設定
-    func setLottieAnimation(){
-        indicatorAnimationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width / 2, height: view.bounds.height / 4)
-        indicatorAnimationView.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
-        indicatorAnimationView.contentMode = .scaleAspectFit
-        view.addSubview(indicatorAnimationView)
-    }
-    
-    /// ログイン時にアニメーションを動かす
-    func startLottieAnimation(){
-        let indicatorAnimation = Animation.named("indicator")
-        indicatorAnimationView.animation = indicatorAnimation
-        indicatorAnimationView.loopMode = .loop
-        indicatorAnimationView.play()
-    }
-    
 }

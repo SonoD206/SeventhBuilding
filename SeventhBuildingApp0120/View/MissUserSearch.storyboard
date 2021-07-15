@@ -11,7 +11,7 @@
         <!--Miss User Search View Controller-->
         <scene sceneID="3P4-xo-5pK">
             <objects>
-                <viewController id="OGE-Ex-2cH" customClass="MissUserSearchViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MissUserSearchViewController" id="OGE-Ex-2cH" customClass="MissUserSearchViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="spB-Qk-1fN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                 <state key="normal" title="7号館に向かう">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedMoveToMapViewButton:" destination="OGE-Ex-2cH" eventType="touchUpInside" id="b2R-v7-Fi5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本電子専門学校７号館との距離が離れています。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hx-0w-QvO">
                                 <rect key="frame" x="72.5" y="522.5" width="269" height="30"/>

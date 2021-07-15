@@ -214,7 +214,7 @@
 				7F5BE8CC269D16F300EAF93D /* FloorDetail.storyboard */,
 				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F5BE8BF269D164700EAF93D /* Map.storyboard */,
-				7F5BE8D1269D177000EAF93D /* Xibs */,
+				7F5BE8D1269D177000EAF93D /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7F5BE8D1269D177000EAF93D /* Xibs */ = {
+		7F5BE8D1269D177000EAF93D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				7F5BE8D5269D1B8800EAF93D /* HomeTableViewCell.swift */,
@@ -250,7 +250,7 @@
 				7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */,
 				7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */,
 			);
-			path = Xibs;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		7FB47FAD269D279900F0DDF4 /* Json */ = {

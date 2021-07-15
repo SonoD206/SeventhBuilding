@@ -11,7 +11,7 @@
         <!--Map View Controller-->
         <scene sceneID="FgT-5V-U1B">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="z0X-4B-NXS" customClass="MapViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" modalPresentationStyle="fullScreen" id="z0X-4B-NXS" customClass="MapViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VV4-iV-2dq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
