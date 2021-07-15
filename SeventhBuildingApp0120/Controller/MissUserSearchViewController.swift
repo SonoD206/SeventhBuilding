@@ -6,24 +6,20 @@
 //
 
 import UIKit
+import Lottie
 
-class MissUserSearchViewController: UIViewController {
+class MissUserSearchViewController: LottieAnimationViewController {
+    
 
+    @IBOutlet private weak var moveToMapViewButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        moveToMapViewButton.settingButton()
+        
+        setLottieAnimation(heightPosition: 0.47)
+        startLottieAnimation(name: "404", mode: .loop)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

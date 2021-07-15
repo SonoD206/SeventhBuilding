@@ -15,16 +15,50 @@
                     <view key="view" contentMode="scaleToFill" id="spB-Qk-1fN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nihondenshiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-BF-Wme">
+                                <rect key="frame" x="0.0" y="244.5" width="414" height="49"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhL-rB-Hfw">
+                                <rect key="frame" x="103.5" y="566.5" width="207" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="7号館に向かう">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本電子専門学校７号館との距離が離れています。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hx-0w-QvO">
+                                <rect key="frame" x="72.5" y="522.5" width="269" height="30"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7xf-dC-4Wg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mhL-rB-Hfw" firstAttribute="centerX" secondItem="spB-Qk-1fN" secondAttribute="centerX" id="5Wi-tz-7fh"/>
+                            <constraint firstItem="1CF-BF-Wme" firstAttribute="centerX" secondItem="spB-Qk-1fN" secondAttribute="centerX" id="8la-NJ-fmn"/>
+                            <constraint firstItem="mhL-rB-Hfw" firstAttribute="width" secondItem="7xf-dC-4Wg" secondAttribute="width" multiplier="0.5" id="Hgv-2I-803"/>
+                            <constraint firstItem="1CF-BF-Wme" firstAttribute="width" secondItem="7xf-dC-4Wg" secondAttribute="width" id="UjC-PC-IoT"/>
+                            <constraint firstItem="3hx-0w-QvO" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="1.2" id="Ylg-t7-hJF"/>
+                            <constraint firstItem="3hx-0w-QvO" firstAttribute="centerX" secondItem="spB-Qk-1fN" secondAttribute="centerX" id="lYy-lR-XDH"/>
+                            <constraint firstItem="3hx-0w-QvO" firstAttribute="width" secondItem="7xf-dC-4Wg" secondAttribute="width" multiplier="0.65" id="xRL-Yy-b0W"/>
+                            <constraint firstItem="mhL-rB-Hfw" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="1.3" id="yf7-jS-nzE"/>
+                            <constraint firstItem="1CF-BF-Wme" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="0.6" id="z7y-Pv-NHz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moveToMapViewButton" destination="mhL-rB-Hfw" id="4iC-Ed-ryW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTg-W3-pl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="339" y="106"/>
+            <point key="canvasLocation" x="337.68115942028987" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>
+        <image name="nihondenshiLogo" width="264.52999877929688" height="49.680000305175781"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
