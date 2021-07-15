@@ -29,6 +29,7 @@
 		7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */; };
 		7F709433269E916B00C04BAC /* MissUserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */; };
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
+		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
 		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
@@ -91,6 +92,7 @@
 		7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
+		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
 		7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				7F5BE8C7269D16DF00EAF93D /* FloorDetailViewController.swift */,
 				7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */,
 				7F5BE8BA269D163800EAF93D /* MapViewController.swift */,
+				7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */,
 				7F5BE8D7269D1B8800EAF93D /* HomeTableViewCell.swift in Sources */,
 				7F5BE8C8269D16DF00EAF93D /* FloorDetailViewController.swift in Sources */,
+				7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */,
 				7F5BE86A269D13CB00EAF93D /* SceneDelegate.swift in Sources */,
 				7F5BE8ED269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift in Sources */,
 				7F5BE8BB269D163800EAF93D /* MapViewController.swift in Sources */,
