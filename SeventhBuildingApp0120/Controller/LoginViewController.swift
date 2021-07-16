@@ -41,9 +41,9 @@ class LoginViewController: LottieAnimationViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        super.viewWillAppear(animated)
+        navigationItem.setHidesBackButton(true, animated: animated)
     }
-    
     @IBAction private func tappedLoginButton(_ sender: UIButton) {
         if self.passwordInputTextField.text == password {
             missLoginMessageLabel.isHidden = true
@@ -51,9 +51,9 @@ class LoginViewController: LottieAnimationViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.startLottieAnimation(name: "success", mode: .playOnce)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
-                    let storyboard = UIStoryboard(name: "Home", bundle: nil)
-                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! UITabBarController
-                    self.show(homeViewController, sender: nil)
+                    let storyboard = UIStoryboard(name: "HomeTab", bundle: nil)
+                    let homeTabStorybord = storyboard.instantiateViewController(withIdentifier: "HomeTabStorybord") as! UITabBarController
+                    self.show(homeTabStorybord, sender: nil)
                 })
             })
         } else {

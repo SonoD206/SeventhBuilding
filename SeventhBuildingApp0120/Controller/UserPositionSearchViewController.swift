@@ -15,16 +15,13 @@ class UserPositionSearchViewController: LottieAnimationViewController {
         
         setLottieAnimation()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
+
+    override func viewDidAppear(_ animated: Bool) {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         startLottieAnimation(name: "indicator", mode:.loop)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0, execute: {
-            
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             self.show(loginViewController, sender: nil)

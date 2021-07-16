@@ -31,6 +31,9 @@
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
 		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
+		7FA1847726A17A3A00DA9A50 /* HomeCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */; };
+		7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */; };
+		7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
 		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
 		7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */; };
@@ -93,6 +96,9 @@
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
 		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
+		7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatalogViewController.swift; sourceTree = "<group>"; };
+		7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeCatalog.storyboard; sourceTree = "<group>"; };
+		7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
 		7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
@@ -210,7 +216,9 @@
 				7F5BE872269D13CD00EAF93D /* LaunchScreen.storyboard */,
 				7FF34CB7269E68AB0070A9D8 /* UserPositionSearch.storyboard */,
 				7F5BE8A2269D143400EAF93D /* Login.storyboard */,
+				7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */,
 				7F5BE8AD269D14CD00EAF93D /* Home.storyboard */,
+				7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */,
 				7F5BE8CC269D16F300EAF93D /* FloorDetail.storyboard */,
 				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F5BE8BF269D164700EAF93D /* Map.storyboard */,
@@ -225,6 +233,7 @@
 				7FF34CAF269E687E0070A9D8 /* UserPositionSearchViewController.swift */,
 				7F5BE89D269D141E00EAF93D /* LoginViewController.swift */,
 				7F5BE8B2269D14F500EAF93D /* HomeViewController.swift */,
+				7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */,
 				7F5BE8C7269D16DF00EAF93D /* FloorDetailViewController.swift */,
 				7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */,
 				7F5BE8BA269D163800EAF93D /* MapViewController.swift */,
@@ -399,6 +408,8 @@
 				7F5BE871269D13CD00EAF93D /* Assets.xcassets in Resources */,
 				7FB47FB0269D27C800F0DDF4 /* success.json in Resources */,
 				7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */,
+				7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */,
+				7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */,
 				7F5BE8C0269D164700EAF93D /* Map.storyboard in Resources */,
 				7F5BE8A3269D143400EAF93D /* Login.storyboard in Resources */,
 				7FF34CC0269E69290070A9D8 /* indicator.json in Resources */,
@@ -540,6 +551,7 @@
 				7F5BE8D7269D1B8800EAF93D /* HomeTableViewCell.swift in Sources */,
 				7F5BE8C8269D16DF00EAF93D /* FloorDetailViewController.swift in Sources */,
 				7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */,
+				7FA1847726A17A3A00DA9A50 /* HomeCatalogViewController.swift in Sources */,
 				7F5BE86A269D13CB00EAF93D /* SceneDelegate.swift in Sources */,
 				7F5BE8ED269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift in Sources */,
 				7F5BE8BB269D163800EAF93D /* MapViewController.swift in Sources */,
