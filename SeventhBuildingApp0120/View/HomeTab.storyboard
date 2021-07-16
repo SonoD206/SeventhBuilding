@@ -28,7 +28,7 @@
         <scene sceneID="oII-op-UuT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Home" id="c4x-BQ-WER" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MT1-n9-A92"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" id="MT1-n9-A92"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xs-gh-iTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,11 +38,15 @@
         <scene sceneID="BPi-L9-h3Q">
             <objects>
                 <viewControllerPlaceholder storyboardName="HomeCatalog" id="Mlb-A1-LJu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fto-gc-bxg"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="list.dash" catalog="system" id="fto-gc-bxg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmk-j3-xQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="967" y="167"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+    </resources>
 </document>
