@@ -44,6 +44,7 @@ class LoginViewController: LottieAnimationViewController {
         super.viewWillAppear(animated)
         navigationItem.setHidesBackButton(true, animated: animated)
     }
+    
     @IBAction private func tappedLoginButton(_ sender: UIButton) {
         if self.passwordInputTextField.text == password {
             missLoginMessageLabel.isHidden = true
