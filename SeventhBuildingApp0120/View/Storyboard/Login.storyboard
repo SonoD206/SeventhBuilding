@@ -19,7 +19,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nihondenshiLogo2" translatesAutoresizingMaskIntoConstraints="NO" id="XtM-Hb-FcJ">
                                 <rect key="frame" x="62" y="164.5" width="290" height="163.5"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワードを入力してください" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-gg-Ffq">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="open2021" placeholder="パスワードを入力してください" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="LOl-gg-Ffq">
                                 <rect key="frame" x="62" y="533" width="290" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rUR-Kg-DAx"/>

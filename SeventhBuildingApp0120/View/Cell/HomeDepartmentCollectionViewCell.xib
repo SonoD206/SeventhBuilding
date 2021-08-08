@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeDepartmentCollectionViewCell" id="gTV-IL-0wX" customClass="HomeDepartmentCollectionViewCell" customModule="SeventhBuildingApp0120" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="159"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="159"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4p8-ov-bCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="159"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ケータイ・アプリケーション科" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoI-Vj-Ld5">
+                                <rect key="frame" x="5" y="5" width="393" height="47.5"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="O36-7e-35e">
+                                <rect key="frame" x="296.5" y="57.5" width="101.5" height="101.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O36-7e-35e" secondAttribute="height" id="Xge-pS-n61"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="O36-7e-35e" secondAttribute="trailing" constant="10" id="0ny-NQ-MIh"/>
+                            <constraint firstAttribute="bottom" secondItem="O36-7e-35e" secondAttribute="bottom" id="8bS-lP-vwy"/>
+                            <constraint firstItem="O36-7e-35e" firstAttribute="top" secondItem="MoI-Vj-Ld5" secondAttribute="bottom" constant="5" id="EGs-In-sVU"/>
+                            <constraint firstItem="MoI-Vj-Ld5" firstAttribute="leading" secondItem="4p8-ov-bCZ" secondAttribute="leading" constant="5" id="dtL-W0-to3"/>
+                            <constraint firstItem="MoI-Vj-Ld5" firstAttribute="height" secondItem="4p8-ov-bCZ" secondAttribute="height" multiplier="0.3" id="kGb-3v-RVY"/>
+                            <constraint firstAttribute="trailing" secondItem="MoI-Vj-Ld5" secondAttribute="trailing" constant="10" id="rKl-63-mLk"/>
+                            <constraint firstItem="MoI-Vj-Ld5" firstAttribute="top" secondItem="4p8-ov-bCZ" secondAttribute="top" constant="5" id="yDe-h4-jWT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4p8-ov-bCZ" secondAttribute="trailing" id="GH3-kS-v6i"/>
+                <constraint firstAttribute="bottom" secondItem="4p8-ov-bCZ" secondAttribute="bottom" id="WAn-Dl-8He"/>
+                <constraint firstItem="4p8-ov-bCZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iH5-6D-iwj"/>
+                <constraint firstItem="4p8-ov-bCZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lqX-hQ-CyT"/>
+            </constraints>
+            <size key="customSize" width="408" height="159"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="-1074.4419642857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="toilet" width="140.96000671386719" height="130.75999450683594"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
