@@ -31,6 +31,10 @@
 		7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE8E5269D1BB100EAF93D /* FloorTableViewCell.xib */; };
 		7F5BE8ED269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */; };
 		7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */; };
+		7F621DBA26C025BD00C04BDD /* FloorGuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F621DB926C025BD00C04BDD /* FloorGuidanceViewController.swift */; };
+		7F621DBF26C025DF00C04BDD /* FloorGuidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F621DBE26C025DF00C04BDD /* FloorGuidance.storyboard */; };
+		7F621DC426C0266F00C04BDD /* DepartmentGuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F621DC326C0266F00C04BDD /* DepartmentGuidanceViewController.swift */; };
+		7F621DC926C0268000C04BDD /* DepartmentGuidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F621DC826C0268000C04BDD /* DepartmentGuidance.storyboard */; };
 		7F709433269E916B00C04BAC /* MissUserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */; };
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
 		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
@@ -105,6 +109,10 @@
 		7F5BE8E5269D1BB100EAF93D /* FloorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloorTableViewCell.xib; sourceTree = "<group>"; };
 		7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		7F621DB926C025BD00C04BDD /* FloorGuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorGuidanceViewController.swift; sourceTree = "<group>"; };
+		7F621DBE26C025DF00C04BDD /* FloorGuidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FloorGuidance.storyboard; sourceTree = "<group>"; };
+		7F621DC326C0266F00C04BDD /* DepartmentGuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGuidanceViewController.swift; sourceTree = "<group>"; };
+		7F621DC826C0268000C04BDD /* DepartmentGuidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DepartmentGuidance.storyboard; sourceTree = "<group>"; };
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
 		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +198,8 @@
 				7F5BE8CC269D16F300EAF93D /* FloorDetail.storyboard */,
 				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F5BE8BF269D164700EAF93D /* Map.storyboard */,
+				7F621DBE26C025DF00C04BDD /* FloorGuidance.storyboard */,
+				7F621DC826C0268000C04BDD /* DepartmentGuidance.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -281,6 +291,8 @@
 				7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */,
 				7F5BE8BA269D163800EAF93D /* MapViewController.swift */,
 				7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */,
+				7F621DB926C025BD00C04BDD /* FloorGuidanceViewController.swift */,
+				7F621DC326C0266F00C04BDD /* DepartmentGuidanceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -449,6 +461,7 @@
 			files = (
 				7F5BE8CD269D16F300EAF93D /* FloorDetail.storyboard in Resources */,
 				7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */,
+				7F621DBF26C025DF00C04BDD /* FloorGuidance.storyboard in Resources */,
 				7FA184A726A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib in Resources */,
 				7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */,
 				7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */,
@@ -458,6 +471,7 @@
 				7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */,
 				7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */,
 				7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */,
+				7F621DC926C0268000C04BDD /* DepartmentGuidance.storyboard in Resources */,
 				7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */,
 				7F5BE8C0269D164700EAF93D /* Map.storyboard in Resources */,
 				7F5BE8A3269D143400EAF93D /* Login.storyboard in Resources */,
@@ -599,6 +613,7 @@
 				7F25775026BEC50D002ADF62 /* CurrentLocationInfomationCollectionViewExtention.swift in Sources */,
 				7F709433269E916B00C04BAC /* MissUserSearchViewController.swift in Sources */,
 				7F5BE868269D13CB00EAF93D /* AppDelegate.swift in Sources */,
+				7F621DBA26C025BD00C04BDD /* FloorGuidanceViewController.swift in Sources */,
 				7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */,
 				7FA184A626A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift in Sources */,
 				7F25774326BEC339002ADF62 /* DepartmentSectionLayoutKind.swift in Sources */,
@@ -613,6 +628,7 @@
 				7F25775626BEC6DF002ADF62 /* Reusable.swift in Sources */,
 				7FF34CB0269E687E0070A9D8 /* UserPositionSearchViewController.swift in Sources */,
 				7F5BE8B3269D14F500EAF93D /* HomeViewController.swift in Sources */,
+				7F621DC426C0266F00C04BDD /* DepartmentGuidanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
