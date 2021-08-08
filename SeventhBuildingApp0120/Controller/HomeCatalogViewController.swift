@@ -30,15 +30,15 @@ class HomeCatalogViewController: ButtonBarPagerTabStripViewController {
         // ButtonBarItemの文字色
         settings.style.buttonBarItemTitleColor = UIColor.lightGray
         // ButtonBarItemのフォントサイズ
-        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 14)
+        settings.style.buttonBarItemFont = .boldSystemFont(ofSize: 18.5)
         // 選択中のButtonBarインジケーターの色
-        settings.style.selectedBarBackgroundColor = UIColor.black
+        settings.style.selectedBarBackgroundColor = UIColor.green
         // 選択中のButtonBarインジケーターの太さ
-        settings.style.selectedBarHeight = 2.0
+        settings.style.selectedBarHeight = 3.0
         // ButtonBarの左端の余白
-        settings.style.buttonBarLeftContentInset = 8
+        settings.style.buttonBarLeftContentInset = 0
         // ButtonBarの右端の余白
-        settings.style.buttonBarRightContentInset = 8
+        settings.style.buttonBarRightContentInset = 0
         // Button内の余白
         settings.style.buttonBarItemLeftRightMargin = 32
         // スワイプやButtonBarItemタップ等でページを切り替えた時の動作
