@@ -48,6 +48,7 @@
 		7FA184A726A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA184A526A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
 		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
+		7FEB538326C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */; };
 		7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */; };
 		7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34C97269D83740070A9D8 /* ButtonExtension.swift */; };
 		7FF34CB0269E687E0070A9D8 /* UserPositionSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF34CAF269E687E0070A9D8 /* UserPositionSearchViewController.swift */; };
@@ -125,6 +126,7 @@
 		7FA184A526A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTimeTableCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
+		7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorGuidanceTableViewExtension.swift; sourceTree = "<group>"; };
 		7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		7FF34C97269D83740070A9D8 /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		7FF34CAF269E687E0070A9D8 /* UserPositionSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPositionSearchViewController.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */,
 				7FF34C97269D83740070A9D8 /* ButtonExtension.swift */,
 				7F25774F26BEC50D002ADF62 /* CurrentLocationInfomationCollectionViewExtention.swift */,
+				7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				7F709433269E916B00C04BAC /* MissUserSearchViewController.swift in Sources */,
 				7F5BE868269D13CB00EAF93D /* AppDelegate.swift in Sources */,
 				7F621DBA26C025BD00C04BDD /* FloorGuidanceViewController.swift in Sources */,
+				7FEB538326C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift in Sources */,
 				7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */,
 				7FA184A626A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift in Sources */,
 				7F25774326BEC339002ADF62 /* DepartmentSectionLayoutKind.swift in Sources */,

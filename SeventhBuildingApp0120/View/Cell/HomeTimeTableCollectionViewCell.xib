@@ -27,13 +27,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="67" height="149"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7B22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rv-du-WJp">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="19"/>
                                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-v0-PxP">
-                                                <rect key="frame" x="0.0" y="20" width="67" height="129"/>
+                                                <rect key="frame" x="0.0" y="19" width="67" height="130"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>

@@ -34,7 +34,7 @@ class HomeCatalogViewController: ButtonBarPagerTabStripViewController {
         // 選択中のButtonBarインジケーターの色
         settings.style.selectedBarBackgroundColor = UIColor.green
         // 選択中のButtonBarインジケーターの太さ
-        settings.style.selectedBarHeight = 3.0
+        settings.style.selectedBarHeight = 5.0
         // ButtonBarの左端の余白
         settings.style.buttonBarLeftContentInset = 0
         // ButtonBarの右端の余白
