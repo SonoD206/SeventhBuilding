@@ -6,20 +6,62 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Catalog View Controller-->
+        <!--フロア案内-->
         <scene sceneID="CPm-9I-yiU">
             <objects>
                 <viewController id="UsG-Kr-XMm" customClass="HomeCatalogViewController" customModule="SeventhBuildingApp0120" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n2G-ou-ZDo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CdM-IR-dsq" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hjR-uR-sIK"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YMo-tp-UgG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8p2-3r-ZZG">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Kz6-dj-fL6">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-SR-FTE">
+                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hXw-pX-ust"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wgf-SR-FTE" firstAttribute="leading" secondItem="hXw-pX-ust" secondAttribute="leading" id="EI4-dp-9hb"/>
+                            <constraint firstItem="CdM-IR-dsq" firstAttribute="leading" secondItem="hXw-pX-ust" secondAttribute="leading" id="Je3-Lg-2KU"/>
+                            <constraint firstItem="hXw-pX-ust" firstAttribute="trailing" secondItem="Wgf-SR-FTE" secondAttribute="trailing" id="M3K-Hq-ItG"/>
+                            <constraint firstItem="CdM-IR-dsq" firstAttribute="top" secondItem="hXw-pX-ust" secondAttribute="top" id="XZQ-M9-60P"/>
+                            <constraint firstItem="CdM-IR-dsq" firstAttribute="trailing" secondItem="hXw-pX-ust" secondAttribute="trailing" id="fsP-Ne-7tV"/>
+                            <constraint firstItem="hXw-pX-ust" firstAttribute="bottom" secondItem="Wgf-SR-FTE" secondAttribute="bottom" id="o7k-ES-BEK"/>
+                            <constraint firstItem="Wgf-SR-FTE" firstAttribute="top" secondItem="CdM-IR-dsq" secondAttribute="bottom" id="uM6-rp-fGv"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pYf-f3-M3F"/>
+                    <navigationItem key="navigationItem" title="フロア案内" id="pYf-f3-M3F"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="CdM-IR-dsq" id="kQy-rK-3ee"/>
+                        <outlet property="containerView" destination="Wgf-SR-FTE" id="SGX-cf-XFk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPO-qK-XdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HeaderTitle: CaseIterable {
+enum HomeViewHeaderTitle: CaseIterable {
     case deaprtmentSectionHeader
     case timetableSectionHeader
     

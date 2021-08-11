@@ -4,20 +4,56 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DepartmentCollectionViewCell" id="gTV-IL-0wX" customClass="DepartmentCollectionViewCell" customModule="SeventhBuildingApp0120" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="124" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="124" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDU-0X-NPP">
+                        <rect key="frame" x="0.0" y="0.0" width="124" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7B22" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubh-ol-ZiU">
+                                <rect key="frame" x="8" y="40" width="108" height="60"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ubh-ol-ZiU" firstAttribute="leading" secondItem="tDU-0X-NPP" secondAttribute="leading" constant="8" id="7K9-gd-GEw"/>
+                            <constraint firstItem="ubh-ol-ZiU" firstAttribute="height" secondItem="tDU-0X-NPP" secondAttribute="height" multiplier="0.6" id="B9j-GY-NtH"/>
+                            <constraint firstAttribute="trailing" secondItem="ubh-ol-ZiU" secondAttribute="trailing" constant="8" id="eqk-S3-bJF"/>
+                            <constraint firstAttribute="bottom" secondItem="ubh-ol-ZiU" secondAttribute="bottom" id="hvb-aX-vFJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="53.623188405797109" y="89.732142857142847"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tDU-0X-NPP" secondAttribute="trailing" id="Bgm-Kx-Avc"/>
+                <constraint firstAttribute="bottom" secondItem="tDU-0X-NPP" secondAttribute="bottom" id="VT3-zM-fyM"/>
+                <constraint firstItem="tDU-0X-NPP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dQH-o5-wjj"/>
+                <constraint firstItem="tDU-0X-NPP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yUa-rF-bHS"/>
+            </constraints>
+            <size key="customSize" width="124" height="100"/>
+            <connections>
+                <outlet property="classroomLabel" destination="ubh-ol-ZiU" id="fVD-IV-Dmn"/>
+            </connections>
+            <point key="canvasLocation" x="-291.304347826087" y="44.196428571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

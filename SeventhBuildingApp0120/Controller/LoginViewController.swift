@@ -51,7 +51,9 @@ class LoginViewController: LottieAnimationViewController {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.startLottieAnimation(name: "success", mode: .playOnce)
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: {
+                    
                     let storyboard = UIStoryboard(name: "HomeTab", bundle: nil)
                     let homeTabStorybord = storyboard.instantiateViewController(withIdentifier: "HomeTabStorybord") as! UITabBarController
                     self.show(homeTabStorybord, sender: nil)
