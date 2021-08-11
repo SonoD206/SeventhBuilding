@@ -31,7 +31,9 @@ class HomeViewController: UIViewController {
         currentLocationInfomationCollectionView.dataSource = self
         
         currentLocationInfomationCollectionView.register(UINib(nibName: HomeDepartmentCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier)
+        
         currentLocationInfomationCollectionView.register(UINib(nibName: HomeTimeTableCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: HomeTimeTableCollectionViewCell.reuseIdentifier)
+        
         currentLocationInfomationCollectionView.register(UINib(nibName: HomeViewHeader.reuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeViewHeader.reuseIdentifier)
         
         currentLocationInfomationCollectionView.collectionViewLayout = createLayout()
@@ -96,7 +98,7 @@ class HomeViewController: UIViewController {
                                                                         alignment: .top)
         let section = NSCollectionLayoutSection(group: group)
         section.boundarySupplementaryItems = [sectionHeader]
-        section.interGroupSpacing = 10
+        section.interGroupSpacing = 16
         section.contentInsets = .init(top: 10, leading: 10, bottom: 20, trailing: 10)
         
         return section

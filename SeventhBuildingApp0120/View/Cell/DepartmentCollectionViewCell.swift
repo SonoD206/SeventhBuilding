@@ -8,10 +8,11 @@
 import UIKit
 
 class DepartmentCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var classroomLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
 }

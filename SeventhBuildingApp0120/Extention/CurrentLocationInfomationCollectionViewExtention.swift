@@ -13,6 +13,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return DepartmentSectionLayoutKind.allCases.count
     }
     
+    
+    /// 1セクション内のCellの数を設定する
+    /// - Parameters:
+    ///   - collectionView: currentLocationInfomationCollectionView
+    ///   - section: 階にある学科一覧とタイムテーブル一覧
+    /// - Returns: 1セクション内のCellの数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let section = DepartmentSectionLayoutKind.allCases[section]
         switch section {
@@ -23,6 +29,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+    /// １セクション内のCellのレイアウトの設定
+    /// - Parameters:
+    ///   - collectionView: currentLocationInfomationCollectionView
+    ///   - indexPath: cellの位置
+    /// - Returns: １セクション内のCellのレイアウト
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let section = DepartmentSectionLayoutKind.allCases[indexPath.section]
         switch section {
@@ -38,9 +49,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
+    /// セクションのヘッダーの設定
+    /// - Parameters:
+    ///   - collectionView: currentLocationInfomationCollectionView
+    ///   - kind: ヘッダーかフッターの種類
+    ///   - indexPath: ヘッダー、フッターの位置
+    /// - Returns: セクションのヘッダー
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let section = DepartmentSectionLayoutKind.allCases[indexPath.section]
-        let headerTitle = HeaderTitle.allCases[indexPath.section]
+        let headerTitle = HomeViewHeaderTitle.allCases[indexPath.section]
         
         switch section {
         
