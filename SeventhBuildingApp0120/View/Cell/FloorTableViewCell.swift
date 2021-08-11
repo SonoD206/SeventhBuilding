@@ -22,4 +22,12 @@ class FloorTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        if highlighted {
+            shadowView.backgroundColor = .systemGray4
+        } else {
+            shadowView.backgroundColor = .systemBackground
+        }
+    }
+    
 }

@@ -18,10 +18,16 @@ extension FloorGuidanceViewController: UITableViewDelegate,UITableViewDataSource
 
         cell.mainBackgroundView.layer.cornerRadius = 8
         cell.mainBackgroundView.layer.masksToBounds = true
-        cell.backgroundColor = .systemBackground
         cell.floorLabel.text = floorNums[indexPath.row]
-        
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "FloorDetail", bundle: nil)
+        let homeTabStorybord = storyboard.instantiateViewController(withIdentifier: "FloorDetailStorybord") as! FloorDetailViewController
+        self.show(homeTabStorybord, sender: nil)
     }
 }
 
