@@ -22,7 +22,7 @@
                                 <rect key="frame" x="20.5" y="102" width="373" height="217.5"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-kq-oTs">
-                                <rect key="frame" x="0.0" y="324.5" width="414" height="488.5"/>
+                                <rect key="frame" x="0.0" y="329.5" width="414" height="483.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TgT-cM-FWz">
                                     <size key="itemSize" width="128" height="128"/>
@@ -52,7 +52,7 @@
                             <constraint firstItem="QmP-kq-oTs" firstAttribute="leading" secondItem="v7W-TD-UCO" secondAttribute="leading" id="KIL-Ny-LO6"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerY" secondItem="4uQ-G6-GgF" secondAttribute="centerY" multiplier="0.47" id="p4r-lc-nSc"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerX" secondItem="4uQ-G6-GgF" secondAttribute="centerX" id="uDC-cf-EEs"/>
-                            <constraint firstItem="QmP-kq-oTs" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="5" id="yR3-SF-ZcN"/>
+                            <constraint firstItem="QmP-kq-oTs" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="10" id="yR3-SF-ZcN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r20-rT-1ib"/>

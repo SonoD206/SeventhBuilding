@@ -71,6 +71,7 @@ hfahfahfhdaufhudah</string>
             <size key="customSize" width="308" height="159"/>
             <connections>
                 <outlet property="classroomNameLabel" destination="7rv-du-WJp" id="Jns-C2-VQB"/>
+                <outlet property="timetableOverViewLabel" destination="zwK-v7-AdQ" id="OtW-77-mZp"/>
             </connections>
             <point key="canvasLocation" x="255.07246376811597" y="138.95089285714286"/>
         </collectionViewCell>

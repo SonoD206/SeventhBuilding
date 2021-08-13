@@ -9,8 +9,8 @@ import UIKit
 
 class HomeTimeTableCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var timetableOverViewLabel: UILabel!
     @IBOutlet weak var classroomNameLabel: UILabel!
-    @IBOutlet weak var timeTableTableView: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
