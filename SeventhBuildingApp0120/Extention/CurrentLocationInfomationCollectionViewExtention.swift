@@ -7,70 +7,59 @@
 
 import UIKit
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return DepartmentSectionLayoutKind.allCases.count
-    }
-    
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     /// 1セクション内のCellの数を設定する
     /// - Parameters:
-    ///   - collectionView: currentLocationInfomationCollectionView
+    ///   - collectionView: homeDepartmentCollectionView
     ///   - section: 階にある学科一覧とタイムテーブル一覧
     /// - Returns: 1セクション内のCellの数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let section = DepartmentSectionLayoutKind.allCases[section]
-        switch section {
-        case .homeDepartment:
-            return 10
-        case .homeDepartmentTimeTable:
-            return 3
-        }
+        return 4
     }
     
     /// １セクション内のCellのレイアウトの設定
     /// - Parameters:
-    ///   - collectionView: currentLocationInfomationCollectionView
+    ///   - collectionView: homeDepartmentCollectionView
     ///   - indexPath: cellの位置
     /// - Returns: １セクション内のCellのレイアウト
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let section = DepartmentSectionLayoutKind.allCases[indexPath.section]
-        switch section {
         
-        case .homeDepartment:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
-            return cell
-            
-        case .homeDepartmentTimeTable:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
-
-            return cell
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
+        
+        return cell
     }
     
-    /// セクションのヘッダーの設定
+    
+    ///　Cellの高さ
     /// - Parameters:
-    ///   - collectionView: currentLocationInfomationCollectionView
-    ///   - kind: ヘッダーかフッターの種類
-    ///   - indexPath: ヘッダー、フッターの位置
-    /// - Returns: セクションのヘッダー
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let section = DepartmentSectionLayoutKind.allCases[indexPath.section]
-        let headerTitle = HomeViewHeaderTitle.allCases[indexPath.section]
-        
-        switch section {
-        
-        case .homeDepartment:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeViewHeader.reuseIdentifier, for: indexPath) as! HomeViewHeader
-            header.setupHeader(title: headerTitle.title)
-            return header
-            
-        case .homeDepartmentTimeTable:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeViewHeader.reuseIdentifier, for: indexPath) as! HomeViewHeader
-            header.setupHeader(title: headerTitle.title)
-            return header
-        }
+    ///   - collectionView: homeDepartmentCollectionView
+    ///   - collectionViewLayout: UICollectionViewDelegateFlowLayout
+    ///   - indexPath: cellの位置
+    /// - Returns: cellの高さ
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height: CGFloat = collectionView.frame.height
+        let width: CGFloat = collectionView.frame.width * 0.9
+        return CGSize(width: width, height: height  )
     }
     
+    /// Cellの縦の間隔
+    /// - Parameters:
+    ///   - collectionView: homeDepartmentCollectionView
+    ///   - collectionViewLayout: UICollectionViewDelegateFlowLayout
+    ///   - section: cellの位置
+    /// - Returns: Cellの縦の間隔
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+    
+    /// Cellの横の間隔
+    /// - Parameters:
+    ///   - collectionView: homeDepartmentCollectionView
+    ///   - collectionViewLayout: UICollectionViewDelegateFlowLayout
+    ///   - section: cellの位置
+    /// - Returns: Cellの横の間隔
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
 }
