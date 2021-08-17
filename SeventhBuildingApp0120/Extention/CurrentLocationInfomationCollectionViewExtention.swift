@@ -43,7 +43,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
             
         case .homeDepartmentTimeTable:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeTimeTableCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeTimeTableCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
 
             return cell
         }

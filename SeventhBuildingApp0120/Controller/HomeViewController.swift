@@ -31,8 +31,8 @@ class HomeViewController: UIViewController {
         currentLocationInfomationCollectionView.dataSource = self
         
         currentLocationInfomationCollectionView.register(UINib(nibName: HomeDepartmentCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier)
-        
-        currentLocationInfomationCollectionView.register(UINib(nibName: HomeTimeTableCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: HomeTimeTableCollectionViewCell.reuseIdentifier)
+//        
+//        currentLocationInfomationCollectionView.register(UINib(nibName: HomeTimeTableCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: HomeTimeTableCollectionViewCell.reuseIdentifier)
         
         currentLocationInfomationCollectionView.register(UINib(nibName: HomeViewHeader.reuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HomeViewHeader.reuseIdentifier)
         
