@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,44 +20,28 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-CT-9sa">
                                 <rect key="frame" x="20.5" y="102" width="373" height="217.5"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-kq-oTs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wHo-lw-TTS">
                                 <rect key="frame" x="0.0" y="329.5" width="414" height="483.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TgT-cM-FWz">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UaY-8V-u74">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2NI-am-FkR">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v7W-TD-UCO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="v7W-TD-UCO" firstAttribute="trailing" secondItem="QmP-kq-oTs" secondAttribute="trailing" id="7sK-Fz-1Ve"/>
-                            <constraint firstItem="v7W-TD-UCO" firstAttribute="bottom" secondItem="QmP-kq-oTs" secondAttribute="bottom" id="9s1-Sa-7jm"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="height" secondItem="v7W-TD-UCO" secondAttribute="height" multiplier="0.3" id="DJy-Pj-M4g"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="width" secondItem="v7W-TD-UCO" secondAttribute="width" multiplier="0.9" id="DWo-ZQ-kxS"/>
-                            <constraint firstItem="QmP-kq-oTs" firstAttribute="leading" secondItem="v7W-TD-UCO" secondAttribute="leading" id="KIL-Ny-LO6"/>
+                            <constraint firstItem="wHo-lw-TTS" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="10" id="IMc-1C-rDK"/>
+                            <constraint firstItem="wHo-lw-TTS" firstAttribute="leading" secondItem="v7W-TD-UCO" secondAttribute="leading" id="MQj-Ig-tnP"/>
+                            <constraint firstItem="v7W-TD-UCO" firstAttribute="trailing" secondItem="wHo-lw-TTS" secondAttribute="trailing" id="UYB-qe-Stg"/>
+                            <constraint firstItem="v7W-TD-UCO" firstAttribute="bottom" secondItem="wHo-lw-TTS" secondAttribute="bottom" id="efG-fD-iml"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerY" secondItem="4uQ-G6-GgF" secondAttribute="centerY" multiplier="0.47" id="p4r-lc-nSc"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerX" secondItem="4uQ-G6-GgF" secondAttribute="centerX" id="uDC-cf-EEs"/>
-                            <constraint firstItem="QmP-kq-oTs" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="10" id="yR3-SF-ZcN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r20-rT-1ib"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="currentLocationInfomationCollectionView" destination="QmP-kq-oTs" id="tOR-aN-Nyo"/>
+                        <outlet property="currentLocationInfomationTableView" destination="wHo-lw-TTS" id="Ccc-mj-lt4"/>
                         <outlet property="currentLocationMapImageView" destination="lbZ-CT-9sa" id="Pcd-Ev-QZd"/>
                     </connections>
                 </viewController>

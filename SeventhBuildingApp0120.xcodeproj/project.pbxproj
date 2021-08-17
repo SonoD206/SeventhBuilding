@@ -40,6 +40,7 @@
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
 		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
+		7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */; };
 		7FA1847726A17A3A00DA9A50 /* HomeCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */; };
 		7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */; };
 		7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */; };
@@ -125,6 +126,7 @@
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
 		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
+		7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationInfomationTableViewExtention.swift; sourceTree = "<group>"; };
 		7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatalogViewController.swift; sourceTree = "<group>"; };
 		7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeCatalog.storyboard; sourceTree = "<group>"; };
 		7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */,
 				7FF34C97269D83740070A9D8 /* ButtonExtension.swift */,
 				7F25774F26BEC50D002ADF62 /* CurrentLocationInfomationCollectionViewExtention.swift */,
+				7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */,
 				7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */,
 				7FEB539A26C3B83F00D4D714 /* DepartmentGuidanceCollectionViewExtention.swift */,
 				7F26CA8426C547B70004624C /* FloorDetailCollectionViewExtention.swift */,
@@ -631,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */,
 				7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */,
 				7F26CA8526C547B70004624C /* FloorDetailCollectionViewExtention.swift in Sources */,
 				7F5BE8E6269D1BB100EAF93D /* FloorTableViewCell.swift in Sources */,
