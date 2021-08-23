@@ -1,0 +1,24 @@
+PODS:
+  - FoldingCell (5.0.2)
+  - lottie-ios (3.2.3)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - FoldingCell
+  - lottie-ios
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  trunk:
+    - FoldingCell
+    - lottie-ios
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  FoldingCell: f92eb5fb9842319e7cd08c71533c98408b785099
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: 7db5473fa41badb2da97379e04649cfb6c0b746d
+
+COCOAPODS: 1.10.1
