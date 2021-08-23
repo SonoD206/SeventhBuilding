@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import FoldingCell
 
 extension FloorDetailViewController: UITableViewDelegate, UITableViewDataSource {
-    
     
     /// 各セクションの数を取る
     /// - Parameter tableView: floorDetailTableView
@@ -43,7 +43,7 @@ extension FloorDetailViewController: UITableViewDelegate, UITableViewDataSource 
         case .homeDepartment:
             return 1
         case .homeDepartmentTimeTable:
-            return 3
+            return foldingCellCount
         }
     }
     
@@ -65,13 +65,8 @@ extension FloorDetailViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
             
         case .homeDepartmentTimeTable:
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTimetableTableViewCell.reuseIdentifier, for: indexPath) as! HomeTimetableTableViewCell
-            
-            cell.mainBackgroundView.layer.cornerRadius = 8
-            cell.mainBackgroundView.layer.masksToBounds = true
-            cell.selectionStyle = UITableViewCell.SelectionStyle.none
-            cell.homeTimetableStackView.layer.cornerRadius = 8
-            cell.homeTimetableStackView.layer.masksToBounds = true
+            let cell = tableView.dequeueReusableCell(withIdentifier: TimetableFoldingCell.reuseIdentifier, for: indexPath) as! TimetableFoldingCell
+        
             return cell
         }
     }
@@ -87,10 +82,33 @@ extension FloorDetailViewController: UITableViewDelegate, UITableViewDataSource 
         
         case .homeDepartment:
             return tableView.frame.height * 0.2
-        
+            
         case .homeDepartmentTimeTable:
-            return tableView.frame.height * 0.23
+            return cellHeights[indexPath.row]
         }
     }
-
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard case let cell as TimetableFoldingCell = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        var duration = 0.0
+        
+        if cellHeights[indexPath.row] == closeCellHeight { // open cell
+            cellHeights[indexPath.row] = openCellHeight
+            cell.unfold(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {// close cell
+            cellHeights[indexPath.row] = closeCellHeight
+            cell.unfold(false, animated: true, completion: nil)
+            duration = 0.5
+        }
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }, completion: nil)
+    }
 }

@@ -6,6 +6,7 @@ target 'SeventhBuildingApp0120' do
   use_frameworks!
 pod 'lottie-ios'
 pod 'XLPagerTabStrip'
+pod 'FoldingCell'
   # Pods for SeventhBuildingApp0120
 
   target 'SeventhBuildingApp0120Tests' do
