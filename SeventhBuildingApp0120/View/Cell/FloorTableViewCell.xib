@@ -67,7 +67,7 @@
                 <outlet property="restroomImageView" destination="YY8-hn-Jzt" id="dYs-O6-TeP"/>
                 <outlet property="shadowView" destination="jrj-Fm-YeQ" id="DtS-6G-6AP"/>
             </connections>
-            <point key="canvasLocation" x="-2.1739130434782612" y="112.5"/>
+            <point key="canvasLocation" x="-479" y="63"/>
         </tableViewCell>
     </objects>
     <resources>

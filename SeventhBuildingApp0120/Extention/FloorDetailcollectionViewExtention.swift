@@ -1,34 +1,34 @@
 //
-//  CurrentLocationInfomationCollectionViewExtention.swift
+//  FloorDetailCollectionViewExtention.swift
 //  SeventhBuildingApp0120
 //
-//  Created by cmStudent on 2021/08/07.
+//  Created by cmStudent on 2021/08/12.
 //
 
 import UIKit
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    /// 1セクション内のCellの数を設定する
-    /// - Parameters:
-    ///   - collectionView: homeDepartmentCollectionView
-    ///   - section: 階にある学科一覧とタイムテーブル一覧
-    /// - Returns: 1セクション内のCellの数
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
+        /// 1セクション内のCellの数を設定する
+        /// - Parameters:
+        ///   - collectionView: homeDepartmentCollectionView
+        ///   - section: 階にある学科一覧とタイムテーブル一覧
+        /// - Returns: 1セクション内のCellの数
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return 4
+        }
     
-    /// １セクション内のCellのレイアウトの設定
-    /// - Parameters:
-    ///   - collectionView: homeDepartmentCollectionView
-    ///   - indexPath: cellの位置
-    /// - Returns: １セクション内のCellのレイアウト
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
-        
-        return cell
-    }
+        /// １セクション内のCellのレイアウトの設定
+        /// - Parameters:
+        ///   - collectionView: homeDepartmentCollectionView
+        ///   - indexPath: cellの位置
+        /// - Returns: １セクション内のCellのレイアウト
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
+
+            return cell
+        }
     
     
     ///　Cellの高さ
@@ -62,4 +62,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16
     }
+    
+    
+    
 }

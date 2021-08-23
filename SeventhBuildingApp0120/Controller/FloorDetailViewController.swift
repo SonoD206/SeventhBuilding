@@ -8,22 +8,34 @@
 import UIKit
 
 class FloorDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var mapImage: UIImageView!
+    @IBOutlet weak var floorDetailTableView: UITableView!
+    
+    var closeCellHeight: CGFloat = 98
+    var openCellHeight: CGFloat = 352
+    
+    let foldingCellCount = 3
+    var cellHeights: [CGFloat] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cellHeights = Array.init(repeating: closeCellHeight, count: foldingCellCount)
+    
+        mapImage.image = UIImage(named: "adalo")
+        
+        floorDetailTableView.delegate = self
+        floorDetailTableView.dataSource = self
+        
+        ///カスタムセルの登録
+        floorDetailTableView.register(UINib(nibName: HomeDepartmentTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HomeDepartmentTableViewCell.reuseIdentifier)
+        
+        floorDetailTableView.register(UINib(nibName: TimetableFoldingCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: TimetableFoldingCell.reuseIdentifier)
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = "B2F"
     }
-    */
-
 }
