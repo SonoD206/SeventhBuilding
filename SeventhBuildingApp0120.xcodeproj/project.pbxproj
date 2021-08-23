@@ -13,6 +13,7 @@
 		7F25776B26BECB21002ADF62 /* HomeViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F25776926BECB21002ADF62 /* HomeViewHeader.swift */; };
 		7F25776C26BECB21002ADF62 /* HomeViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F25776A26BECB21002ADF62 /* HomeViewHeader.xib */; };
 		7F25777126BECE3B002ADF62 /* HomeViewHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F25777026BECE3B002ADF62 /* HomeViewHeaderTitle.swift */; };
+		7F26CA8526C547B70004624C /* FloorDetailCollectionViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F26CA8426C547B70004624C /* FloorDetailCollectionViewExtention.swift */; };
 		7F5BE868269D13CB00EAF93D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BE867269D13CB00EAF93D /* AppDelegate.swift */; };
 		7F5BE86A269D13CB00EAF93D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5BE869269D13CB00EAF93D /* SceneDelegate.swift */; };
 		7F5BE871269D13CD00EAF93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F5BE870269D13CD00EAF93D /* Assets.xcassets */; };
@@ -39,15 +40,21 @@
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
 		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
+		7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */; };
+		7F8DF8EF26CC5C1000AC1EC4 /* TimetableFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */; };
+		7F8DF8F026CC5C1000AC1EC4 /* TimetableFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */; };
 		7FA1847726A17A3A00DA9A50 /* HomeCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */; };
 		7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */; };
 		7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */; };
 		7FA1849F26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */; };
 		7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */; };
-		7FA184A626A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA184A426A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift */; };
-		7FA184A726A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA184A526A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
 		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
+		7FD8026F26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */; };
+		7FD8027026CBD69D00B68126 /* HomeDepartmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8026E26CBD69D00B68126 /* HomeDepartmentTableViewCell.xib */; };
+		7FD8027626CBD7C500B68126 /* HomeTimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8027426CBD7C500B68126 /* HomeTimetableTableViewCell.swift */; };
+		7FD8027726CBD7C500B68126 /* HomeTimetableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8027526CBD7C500B68126 /* HomeTimetableTableViewCell.xib */; };
+		7FD8028526CBDD1600B68126 /* FloorDetailTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8028426CBDD1600B68126 /* FloorDetailTableViewExtention.swift */; };
 		7FEB538326C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */; };
 		7FEB538E26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB538D26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift */; };
 		7FEB539326C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB539226C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift */; };
@@ -89,6 +96,7 @@
 		7F25776926BECB21002ADF62 /* HomeViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewHeader.swift; sourceTree = "<group>"; };
 		7F25776A26BECB21002ADF62 /* HomeViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewHeader.xib; sourceTree = "<group>"; };
 		7F25777026BECE3B002ADF62 /* HomeViewHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewHeaderTitle.swift; sourceTree = "<group>"; };
+		7F26CA8426C547B70004624C /* FloorDetailCollectionViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorDetailCollectionViewExtention.swift; sourceTree = "<group>"; };
 		7F5BE864269D13CB00EAF93D /* SeventhBuildingApp0120.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeventhBuildingApp0120.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5BE867269D13CB00EAF93D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F5BE869269D13CB00EAF93D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,15 +128,21 @@
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
 		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
+		7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationInfomationTableViewExtention.swift; sourceTree = "<group>"; };
+		7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableFoldingCell.swift; sourceTree = "<group>"; };
+		7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimetableFoldingCell.xib; sourceTree = "<group>"; };
 		7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCatalogViewController.swift; sourceTree = "<group>"; };
 		7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeCatalog.storyboard; sourceTree = "<group>"; };
 		7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
 		7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
-		7FA184A426A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimeTableCollectionViewCell.swift; sourceTree = "<group>"; };
-		7FA184A526A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTimeTableCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
+		7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentTableViewCell.swift; sourceTree = "<group>"; };
+		7FD8026E26CBD69D00B68126 /* HomeDepartmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDepartmentTableViewCell.xib; sourceTree = "<group>"; };
+		7FD8027426CBD7C500B68126 /* HomeTimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimetableTableViewCell.swift; sourceTree = "<group>"; };
+		7FD8027526CBD7C500B68126 /* HomeTimetableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTimetableTableViewCell.xib; sourceTree = "<group>"; };
+		7FD8028426CBDD1600B68126 /* FloorDetailTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorDetailTableViewExtention.swift; sourceTree = "<group>"; };
 		7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorGuidanceTableViewExtension.swift; sourceTree = "<group>"; };
 		7FEB538D26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGuidanceSectionLayoutKind.swift; sourceTree = "<group>"; };
 		7FEB539226C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGuidanceHeaderTitle.swift; sourceTree = "<group>"; };
@@ -202,10 +216,10 @@
 				7F5BE8A2269D143400EAF93D /* Login.storyboard */,
 				7FA1848326A18B9700DA9A50 /* HomeTab.storyboard */,
 				7F5BE8AD269D14CD00EAF93D /* Home.storyboard */,
-				7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */,
 				7F5BE8CC269D16F300EAF93D /* FloorDetail.storyboard */,
-				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F5BE8BF269D164700EAF93D /* Map.storyboard */,
+				7FA1847B26A17AE200DA9A50 /* HomeCatalog.storyboard */,
+				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F621DBE26C025DF00C04BDD /* FloorGuidance.storyboard */,
 				7F621DC826C0268000C04BDD /* DepartmentGuidance.storyboard */,
 			);
@@ -291,8 +305,8 @@
 		7F5BE8A8269D14A200EAF93D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7FF34CAF269E687E0070A9D8 /* UserPositionSearchViewController.swift */,
 				7F5BE89D269D141E00EAF93D /* LoginViewController.swift */,
+				7FF34CAF269E687E0070A9D8 /* UserPositionSearchViewController.swift */,
 				7F5BE8B2269D14F500EAF93D /* HomeViewController.swift */,
 				7FA1847626A17A3A00DA9A50 /* HomeCatalogViewController.swift */,
 				7F621DB926C025BD00C04BDD /* FloorGuidanceViewController.swift */,
@@ -319,12 +333,16 @@
 		7F5BE8D1269D177000EAF93D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */,
+				7FD8026E26CBD69D00B68126 /* HomeDepartmentTableViewCell.xib */,
 				7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */,
 				7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */,
-				7FA184A426A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift */,
-				7FA184A526A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib */,
+				7FD8027426CBD7C500B68126 /* HomeTimetableTableViewCell.swift */,
+				7FD8027526CBD7C500B68126 /* HomeTimetableTableViewCell.xib */,
 				7F5BE8E4269D1BB100EAF93D /* FloorTableViewCell.swift */,
 				7F5BE8E5269D1BB100EAF93D /* FloorTableViewCell.xib */,
+				7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */,
+				7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */,
 				7F5BE8EB269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift */,
 				7F5BE8EC269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib */,
 			);
@@ -347,8 +365,11 @@
 				7FF34C92269D82B20070A9D8 /* TextFieldExtension.swift */,
 				7FF34C97269D83740070A9D8 /* ButtonExtension.swift */,
 				7F25774F26BEC50D002ADF62 /* CurrentLocationInfomationCollectionViewExtention.swift */,
+				7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */,
 				7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */,
 				7FEB539A26C3B83F00D4D714 /* DepartmentGuidanceCollectionViewExtention.swift */,
+				7F26CA8426C547B70004624C /* FloorDetailCollectionViewExtention.swift */,
+				7FD8028426CBDD1600B68126 /* FloorDetailTableViewExtention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -474,7 +495,7 @@
 				7F5BE8CD269D16F300EAF93D /* FloorDetail.storyboard in Resources */,
 				7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */,
 				7F621DBF26C025DF00C04BDD /* FloorGuidance.storyboard in Resources */,
-				7FA184A726A3194600DA9A50 /* HomeTimeTableCollectionViewCell.xib in Resources */,
+				7FD8027726CBD7C500B68126 /* HomeTimetableTableViewCell.xib in Resources */,
 				7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */,
 				7F5BE8EE269D1BEA00EAF93D /* DepartmentCollectionViewCell.xib in Resources */,
 				7F5BE874269D13CD00EAF93D /* LaunchScreen.storyboard in Resources */,
@@ -482,7 +503,9 @@
 				7FB47FB0269D27C800F0DDF4 /* success.json in Resources */,
 				7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */,
 				7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */,
+				7FD8027026CBD69D00B68126 /* HomeDepartmentTableViewCell.xib in Resources */,
 				7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */,
+				7F8DF8F026CC5C1000AC1EC4 /* TimetableFoldingCell.xib in Resources */,
 				7F621DC926C0268000C04BDD /* DepartmentGuidance.storyboard in Resources */,
 				7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */,
 				7F5BE8C0269D164700EAF93D /* Map.storyboard in Resources */,
@@ -618,9 +641,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */,
 				7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */,
+				7F26CA8526C547B70004624C /* FloorDetailCollectionViewExtention.swift in Sources */,
 				7F5BE8E6269D1BB100EAF93D /* FloorTableViewCell.swift in Sources */,
 				7FA1849F26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift in Sources */,
+				7FD8028526CBDD1600B68126 /* FloorDetailTableViewExtention.swift in Sources */,
 				7F5BE89E269D141E00EAF93D /* LoginViewController.swift in Sources */,
 				7F25775026BEC50D002ADF62 /* CurrentLocationInfomationCollectionViewExtention.swift in Sources */,
 				7FEB539B26C3B84000D4D714 /* DepartmentGuidanceCollectionViewExtention.swift in Sources */,
@@ -629,8 +655,9 @@
 				7F621DBA26C025BD00C04BDD /* FloorGuidanceViewController.swift in Sources */,
 				7FEB538326C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift in Sources */,
 				7FEB539326C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift in Sources */,
+				7FD8026F26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift in Sources */,
+				7F8DF8EF26CC5C1000AC1EC4 /* TimetableFoldingCell.swift in Sources */,
 				7FF34C93269D82B20070A9D8 /* TextFieldExtension.swift in Sources */,
-				7FA184A626A3194600DA9A50 /* HomeTimeTableCollectionViewCell.swift in Sources */,
 				7F25774326BEC339002ADF62 /* DepartmentSectionLayoutKind.swift in Sources */,
 				7FEB538E26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift in Sources */,
 				7F5BE8C8269D16DF00EAF93D /* FloorDetailViewController.swift in Sources */,
@@ -638,6 +665,7 @@
 				7FA1847726A17A3A00DA9A50 /* HomeCatalogViewController.swift in Sources */,
 				7F5BE86A269D13CB00EAF93D /* SceneDelegate.swift in Sources */,
 				7F5BE8ED269D1BEA00EAF93D /* DepartmentCollectionViewCell.swift in Sources */,
+				7FD8027626CBD7C500B68126 /* HomeTimetableTableViewCell.swift in Sources */,
 				7F5BE8BB269D163800EAF93D /* MapViewController.swift in Sources */,
 				7F25777126BECE3B002ADF62 /* HomeViewHeaderTitle.swift in Sources */,
 				7F25776B26BECB21002ADF62 /* HomeViewHeader.swift in Sources */,

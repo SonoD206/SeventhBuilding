@@ -29,5 +29,9 @@ extension FloorGuidanceViewController: UITableViewDelegate,UITableViewDataSource
         let homeTabStorybord = storyboard.instantiateViewController(withIdentifier: "FloorDetailStorybord") as! FloorDetailViewController
         self.show(homeTabStorybord, sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height * 0.15
+    }
 }
 

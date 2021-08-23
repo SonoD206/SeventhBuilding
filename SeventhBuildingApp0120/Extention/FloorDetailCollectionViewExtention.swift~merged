@@ -63,7 +63,10 @@ extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewD
         return 16
     }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2fe2d97b7d4bcdd90e0e55fd37292c70a35d860
     
     
 }

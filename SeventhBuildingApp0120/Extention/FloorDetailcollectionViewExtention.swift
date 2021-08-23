@@ -61,9 +61,5 @@ extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewD
     /// - Returns: Cellの横の間隔
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16
-    }
-    
-
-    
-    
+    }    
 }

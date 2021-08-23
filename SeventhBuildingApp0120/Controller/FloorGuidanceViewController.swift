@@ -23,13 +23,12 @@ class FloorGuidanceViewController: UIViewController {
         
         floorGuidanceTableView.delegate = self
         floorGuidanceTableView.dataSource = self
-        ///セルの選択不可
-//        floorGuidanceTableView.allowsSelection = false
         
         ///カスタムセルの登録
         floorGuidanceTableView.register(UINib(nibName: FloorTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: FloorTableViewCell.reuseIdentifier)
-        }
+
     }
+}
 
 extension FloorGuidanceViewController: IndicatorInfoProvider{
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
