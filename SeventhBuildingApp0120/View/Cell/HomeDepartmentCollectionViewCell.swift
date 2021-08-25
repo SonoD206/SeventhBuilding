@@ -21,4 +21,10 @@ class HomeDepartmentCollectionViewCell: UICollectionViewCell {
         contentView.layer.shadowOpacity = 1
         contentView.layer.shadowColor = UIColor.black.cgColor
     }
+    
+    func initialize(floor: Floor) {
+        let restroomKind = RestroomKind(rawValue: floor.restroomKind) ?? .menAndWomen
+        departmentNameLabel.text = floor.departments[0].name
+        restroomKindImageView.image = UIImage(named: restroomKind.imageName)
+    }
 }

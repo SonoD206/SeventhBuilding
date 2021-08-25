@@ -16,14 +16,17 @@ class HomeViewController: UIViewController {
     var openCellHeight: CGFloat = 352
     
     let foldingCellCount = 3
+    ///FoldingCellの高さの配列
     var cellHeights: [CGFloat] = []
+    
+    /// 7号館のフロア情報を格納する配列
+    static var floors: [Floor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cellHeights = Array.init(repeating: closeCellHeight, count: foldingCellCount)
         
-        currentLocationMapImageView.image = UIImage(named: "adalo")
         currentLocationInfomationTableView.delegate = self
         currentLocationInfomationTableView.dataSource = self
         
@@ -31,6 +34,8 @@ class HomeViewController: UIViewController {
         currentLocationInfomationTableView.register(UINib(nibName: HomeDepartmentTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HomeDepartmentTableViewCell.reuseIdentifier)
         
         currentLocationInfomationTableView.register(UINib(nibName: TimetableFoldingCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: TimetableFoldingCell.reuseIdentifier)
+        
+        updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,4 +44,16 @@ class HomeViewController: UIViewController {
         self.title = "現在地"
     }
     
+    /// フロア情報を画面に表示する
+    private func updateUI() {
+        NetworkManager.shared.loadFloors { result in
+            switch result {
+            case .success(let floors):
+                HomeViewController.floors.append(contentsOf: floors)
+                self.currentLocationInfomationTableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }

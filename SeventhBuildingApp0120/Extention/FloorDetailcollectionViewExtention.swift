@@ -15,7 +15,7 @@ extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewD
         ///   - section: 階にある学科一覧とタイムテーブル一覧
         /// - Returns: 1セクション内のCellの数
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 4
+            return floor.departments.count
         }
     
         /// １セクション内のCellのレイアウトの設定
@@ -24,9 +24,10 @@ extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewD
         ///   - indexPath: cellの位置
         /// - Returns: １セクション内のCellのレイアウト
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
-
+            
+            cell.initialize(floor: floor)
+            
             return cell
         }
     

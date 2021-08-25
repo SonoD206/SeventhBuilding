@@ -18,6 +18,8 @@ class FloorDetailViewController: UIViewController {
     let foldingCellCount = 3
     var cellHeights: [CGFloat] = []
     
+    var floor: Floor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +38,10 @@ class FloorDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "B2F"
+        self.title = "\(floor.name)F"
+    }
+    
+    func initialize(floor: Floor) {
+        self.floor = floor
     }
 }

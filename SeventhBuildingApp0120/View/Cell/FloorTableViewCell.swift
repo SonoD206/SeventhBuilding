@@ -30,4 +30,10 @@ class FloorTableViewCell: UITableViewCell {
         }
     }
     
+    func initialize(floor: Floor) {
+        let restroomKind = RestroomKind(rawValue: floor.restroomKind) ?? .menAndWomen
+        floorLabel.text     = "\(floor.name)F"
+        restroomImageView.image = UIImage(named: restroomKind.imageName)
+    }
+    
 }
