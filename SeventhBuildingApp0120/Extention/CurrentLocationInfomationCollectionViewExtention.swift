@@ -15,7 +15,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     ///   - section: 階にある学科一覧とタイムテーブル一覧
     /// - Returns: 1セクション内のCellの数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let itemCount = HomeViewController.floors[safe: 0]?.departments.count else { return 3 }
+        guard let itemCount = HomeViewController.floors[safe: self.userCurrentNumIndex]?.departments.count else { return 3 }
         return itemCount
     }
     
@@ -27,8 +27,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
-        guard let floor = HomeViewController.floors[safe: 3] else { return cell }
-        cell.initialize(floor: floor)
+        guard let floor = HomeViewController.floors[safe: self.userCurrentNumIndex] else { return cell }
+        cell.initialize(department: floor.departments[safe: indexPath.row])
         return cell
     }
     

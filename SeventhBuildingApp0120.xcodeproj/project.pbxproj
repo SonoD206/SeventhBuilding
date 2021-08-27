@@ -43,6 +43,8 @@
 		7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */; };
 		7F8DF8EF26CC5C1000AC1EC4 /* TimetableFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */; };
 		7F8DF8F026CC5C1000AC1EC4 /* TimetableFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */; };
+		7F994B2326D95D65003A5820 /* setting.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F994B2126D95D65003A5820 /* setting.json */; };
+		7F994B2426D95D65003A5820 /* walk.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F994B2226D95D65003A5820 /* walk.json */; };
 		7FA0A64B26D591EC0064405F /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0A64A26D591EC0064405F /* Floor.swift */; };
 		7FA0A65126D593B30064405F /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0A65026D593B30064405F /* Department.swift */; };
 		7FA0A65926D593E70064405F /* Timetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA0A65826D593E70064405F /* Timetable.swift */; };
@@ -56,7 +58,6 @@
 		7FA1849F26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */; };
 		7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
-		7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAF269D27C800F0DDF4 /* 404.json */; };
 		7FC70BB226D3E0990091BB38 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70BB126D3E0990091BB38 /* Weather.swift */; };
 		7FC70BBA26D3E2250091BB38 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70BB926D3E2250091BB38 /* Current.swift */; };
 		7FD8026F26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */; };
@@ -140,6 +141,8 @@
 		7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationInfomationTableViewExtention.swift; sourceTree = "<group>"; };
 		7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableFoldingCell.swift; sourceTree = "<group>"; };
 		7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimetableFoldingCell.xib; sourceTree = "<group>"; };
+		7F994B2126D95D65003A5820 /* setting.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = setting.json; sourceTree = "<group>"; };
+		7F994B2226D95D65003A5820 /* walk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = walk.json; sourceTree = "<group>"; };
 		7FA0A64A26D591EC0064405F /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		7FA0A65026D593B30064405F /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		7FA0A65826D593E70064405F /* Timetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timetable.swift; sourceTree = "<group>"; };
@@ -153,7 +156,6 @@
 		7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
-		7FB47FAF269D27C800F0DDF4 /* 404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 404.json; sourceTree = "<group>"; };
 		7FC70BB126D3E0990091BB38 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7FC70BB926D3E2250091BB38 /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -396,8 +398,9 @@
 		7FB47FAD269D279900F0DDF4 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				7F994B2126D95D65003A5820 /* setting.json */,
+				7F994B2226D95D65003A5820 /* walk.json */,
 				7FF34CBF269E69290070A9D8 /* indicator.json */,
-				7FB47FAF269D27C800F0DDF4 /* 404.json */,
 				7FB47FAE269D27C800F0DDF4 /* success.json */,
 			);
 			path = Json;
@@ -560,7 +563,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F5BE8CD269D16F300EAF93D /* FloorDetail.storyboard in Resources */,
-				7FB47FB1269D27C800F0DDF4 /* 404.json in Resources */,
 				7F621DBF26C025DF00C04BDD /* FloorGuidance.storyboard in Resources */,
 				7FD8027726CBD7C500B68126 /* HomeTimetableTableViewCell.xib in Resources */,
 				7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */,
@@ -570,7 +572,9 @@
 				7FB47FB0269D27C800F0DDF4 /* success.json in Resources */,
 				7F5BE8E7269D1BB100EAF93D /* FloorTableViewCell.xib in Resources */,
 				7FA1848426A18B9700DA9A50 /* HomeTab.storyboard in Resources */,
+				7F994B2326D95D65003A5820 /* setting.json in Resources */,
 				7FD8027026CBD69D00B68126 /* HomeDepartmentTableViewCell.xib in Resources */,
+				7F994B2426D95D65003A5820 /* walk.json in Resources */,
 				7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */,
 				7F8DF8F026CC5C1000AC1EC4 /* TimetableFoldingCell.xib in Resources */,
 				7F621DC926C0268000C04BDD /* DepartmentGuidance.storyboard in Resources */,

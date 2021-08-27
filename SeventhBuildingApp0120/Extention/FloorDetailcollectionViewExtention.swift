@@ -26,7 +26,7 @@ extension FloorDetailViewController: UICollectionViewDelegate, UICollectionViewD
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeDepartmentCollectionViewCell.reuseIdentifier, for: indexPath) as! HomeDepartmentCollectionViewCell
             
-            cell.initialize(floor: floor)
+            cell.initialize(department: floor.departments[safe: indexPath.row])
             
             return cell
         }
