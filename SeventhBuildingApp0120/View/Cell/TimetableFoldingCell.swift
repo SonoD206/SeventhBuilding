@@ -27,10 +27,10 @@ class TimetableFoldingCell: FoldingCell {
     @IBOutlet weak var thirdTimetableTitleLabel: UILabel!
     @IBOutlet weak var thirdTimetableOverviewLabel: UILabel!
     @IBOutlet weak var thirdTimetableStartTimeLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-    
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,4 +42,36 @@ class TimetableFoldingCell: FoldingCell {
         return durations[itemIndex]
     }
     
+    func initialize(department: Department?) {
+        classroomNameLabel.text = department?.classroom
+        classroomForegroundLabel.text = department?.classroom
+        
+        switch department?.classroom {
+        case "782":
+            timetableForegroundLabel.text = """
+                \(department?.timetables?[safe: 0]?.title ?? "イベントはありません")
+                """
+        case "781","751","761":
+            timetableForegroundLabel.text = """
+                \(department?.timetables?[safe: 0]?.title ?? "イベントはありません")
+                \(department?.timetables?[safe: 1]?.title ?? "イベントはありません")
+                \(department?.timetables?[safe: 2]?.title ?? "イベントはありません")
+                """
+            thirdTimetableTitleLabel.text = department?.timetables?[safe: 2]?.title ?? "イベントはありません"
+            thirdTimetableOverviewLabel.text = department?.timetables?[safe: 2]?.overview ?? "イベントはありません"
+        default:
+            timetableForegroundLabel.text = """
+                \(department?.timetables?[safe: 0]?.title ?? "イベントはありません")
+                \(department?.timetables?[safe: 1]?.title ?? "イベントはありません")
+                """
+        }
+        firstTimetableTitleLabel.text = department?.timetables?[safe: 0]?.title ?? "イベントはありません"
+        firstTimetableOverviewLabel.text = department?.timetables?[safe: 0]?.overview ?? "イベントはありません"
+        
+        if department?.classroom != "781"{
+            secoundTimetableTitleLabel.text = department?.timetables?[safe: 1]?.title ?? "イベントはありません"
+            secoundTimetableOverviewLabel.text = department?.timetables?[safe: 1]?.overview ?? "イベントはありません"
+        }
+    }
+
 }

@@ -21,4 +21,8 @@ class HomeDepartmentCollectionViewCell: UICollectionViewCell {
         contentView.layer.shadowOpacity = 1
         contentView.layer.shadowColor = UIColor.black.cgColor
     }
+    
+    func initialize(department: Department?) {
+        departmentNameLabel.text = department?.name
+    }
 }

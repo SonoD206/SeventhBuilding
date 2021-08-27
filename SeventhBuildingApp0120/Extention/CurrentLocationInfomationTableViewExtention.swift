@@ -66,7 +66,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             
         case .homeDepartmentTimeTable:
             let cell = tableView.dequeueReusableCell(withIdentifier: TimetableFoldingCell.reuseIdentifier, for: indexPath) as! TimetableFoldingCell
-
+            let department = HomeViewController.floors[safe: self.userCurrentNumIndex]?.departments[safe: indexPath.row]
+            cell.initialize(department: department)
             return cell
         }
     }

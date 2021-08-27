@@ -18,13 +18,13 @@ class FloorDetailViewController: UIViewController {
     let foldingCellCount = 3
     var cellHeights: [CGFloat] = []
     
+    var floor: Floor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cellHeights = Array.init(repeating: closeCellHeight, count: foldingCellCount)
     
-        mapImage.image = UIImage(named: "adalo")
-        
         floorDetailTableView.delegate = self
         floorDetailTableView.dataSource = self
         
@@ -36,6 +36,12 @@ class FloorDetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.title = "B2F"
+        self.title = "\(floor.name)F"
+        mapImage.image = UIImage(named: "floor\(floor.name)_map")
+        
+    }
+    
+    func initialize(floor: Floor) {
+        self.floor = floor
     }
 }

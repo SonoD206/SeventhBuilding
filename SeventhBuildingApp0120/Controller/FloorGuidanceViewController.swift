@@ -15,9 +15,6 @@ class FloorGuidanceViewController: UIViewController {
     
     @IBOutlet weak var floorGuidanceTableView: UITableView!
     
-    ///Debag用
-    let floorNums = ["B2F","B1F","1F","2F","3F","4F","5F","6F","7F","8F","9F","10F"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

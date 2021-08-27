@@ -10,6 +10,8 @@ import XLPagerTabStrip
 
 class DepartmentGuidanceViewController: UIViewController {
     
+    var floors: [Floor] = []
+    
     @IBOutlet weak var departmentGuidanceCollectionView: UICollectionView!
     ///ボタンのタイトル
     var itemInfo: IndicatorInfo = "学科"

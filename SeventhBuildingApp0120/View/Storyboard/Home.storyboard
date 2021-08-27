@@ -38,7 +38,17 @@
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerX" secondItem="4uQ-G6-GgF" secondAttribute="centerX" id="uDC-cf-EEs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="r20-rT-1ib"/>
+                    <navigationItem key="navigationItem" id="r20-rT-1ib">
+                        <rightBarButtonItems>
+                            <barButtonItem id="ZrE-rG-LOg"/>
+                            <barButtonItem id="J72-p5-aWj">
+                                <imageReference key="image" image="arrow.clockwise" catalog="system" renderingMode="original"/>
+                                <connections>
+                                    <action selector="reloadCurrentButton:" destination="mFQ-LX-f2i" id="zXn-rR-b9R"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentLocationInfomationTableView" destination="wHo-lw-TTS" id="Ccc-mj-lt4"/>
@@ -73,6 +83,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
