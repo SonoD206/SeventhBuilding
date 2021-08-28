@@ -22,23 +22,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jq4-wL-oEV">
                                 <rect key="frame" x="0.0" y="341" width="414" height="521"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQs-sG-n1M" customClass="SettingLottieView" customModule="SeventhBuildingApp0120" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="341" width="414" height="521"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0oU-NQ-U5a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0oU-NQ-U5a" firstAttribute="bottom" secondItem="Jq4-wL-oEV" secondAttribute="bottom" id="HYJ-Vb-YEI"/>
                             <constraint firstItem="nFz-0F-fpE" firstAttribute="width" secondItem="0oU-NQ-U5a" secondAttribute="width" multiplier="0.9" id="LV4-G7-quO"/>
+                            <constraint firstItem="OQs-sG-n1M" firstAttribute="leading" secondItem="0oU-NQ-U5a" secondAttribute="leading" id="NNz-1Z-wJw"/>
                             <constraint firstItem="nFz-0F-fpE" firstAttribute="centerY" secondItem="Nzw-JT-MmC" secondAttribute="centerY" multiplier="0.48" id="SF1-OQ-ZIa"/>
                             <constraint firstItem="0oU-NQ-U5a" firstAttribute="trailing" secondItem="Jq4-wL-oEV" secondAttribute="trailing" id="Sql-m0-TJ0"/>
                             <constraint firstItem="Jq4-wL-oEV" firstAttribute="leading" secondItem="0oU-NQ-U5a" secondAttribute="leading" id="U5j-RD-iID"/>
+                            <constraint firstItem="OQs-sG-n1M" firstAttribute="top" secondItem="nFz-0F-fpE" secondAttribute="bottom" constant="10" id="WYC-DC-VWj"/>
                             <constraint firstItem="nFz-0F-fpE" firstAttribute="centerX" secondItem="Nzw-JT-MmC" secondAttribute="centerX" id="b8I-V6-eFC"/>
+                            <constraint firstItem="0oU-NQ-U5a" firstAttribute="trailing" secondItem="OQs-sG-n1M" secondAttribute="trailing" id="gAR-Ar-GWf"/>
                             <constraint firstItem="Jq4-wL-oEV" firstAttribute="top" secondItem="nFz-0F-fpE" secondAttribute="bottom" constant="10" id="gx0-Tv-zwz"/>
                             <constraint firstItem="nFz-0F-fpE" firstAttribute="height" secondItem="0oU-NQ-U5a" secondAttribute="height" multiplier="0.3" id="kie-06-PWX"/>
+                            <constraint firstItem="0oU-NQ-U5a" firstAttribute="bottom" secondItem="OQs-sG-n1M" secondAttribute="bottom" id="tbP-m2-qkB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ozG-UO-v7T"/>
                     <connections>
                         <outlet property="floorDetailTableView" destination="Jq4-wL-oEV" id="XD1-oH-nJa"/>
+                        <outlet property="lottieView" destination="OQs-sG-n1M" id="BtZ-zi-kHI"/>
                         <outlet property="mapImage" destination="nFz-0F-fpE" id="6Ow-jm-AMp"/>
                     </connections>
                 </viewController>

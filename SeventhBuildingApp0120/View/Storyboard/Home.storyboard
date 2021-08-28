@@ -24,18 +24,26 @@
                                 <rect key="frame" x="0.0" y="329.5" width="414" height="483.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJv-yA-miw" customClass="SettingLottieView" customModule="SeventhBuildingApp0120" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="329.5" width="414" height="483.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v7W-TD-UCO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="height" secondItem="v7W-TD-UCO" secondAttribute="height" multiplier="0.3" id="DJy-Pj-M4g"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="width" secondItem="v7W-TD-UCO" secondAttribute="width" multiplier="0.9" id="DWo-ZQ-kxS"/>
+                            <constraint firstItem="mJv-yA-miw" firstAttribute="leading" secondItem="v7W-TD-UCO" secondAttribute="leading" id="Dke-0A-BaY"/>
                             <constraint firstItem="wHo-lw-TTS" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="10" id="IMc-1C-rDK"/>
                             <constraint firstItem="wHo-lw-TTS" firstAttribute="leading" secondItem="v7W-TD-UCO" secondAttribute="leading" id="MQj-Ig-tnP"/>
+                            <constraint firstItem="v7W-TD-UCO" firstAttribute="bottom" secondItem="mJv-yA-miw" secondAttribute="bottom" id="Ram-FG-iIe"/>
                             <constraint firstItem="v7W-TD-UCO" firstAttribute="trailing" secondItem="wHo-lw-TTS" secondAttribute="trailing" id="UYB-qe-Stg"/>
+                            <constraint firstItem="v7W-TD-UCO" firstAttribute="trailing" secondItem="mJv-yA-miw" secondAttribute="trailing" id="YgQ-Mh-Bny"/>
                             <constraint firstItem="v7W-TD-UCO" firstAttribute="bottom" secondItem="wHo-lw-TTS" secondAttribute="bottom" id="efG-fD-iml"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerY" secondItem="4uQ-G6-GgF" secondAttribute="centerY" multiplier="0.47" id="p4r-lc-nSc"/>
                             <constraint firstItem="lbZ-CT-9sa" firstAttribute="centerX" secondItem="4uQ-G6-GgF" secondAttribute="centerX" id="uDC-cf-EEs"/>
+                            <constraint firstItem="mJv-yA-miw" firstAttribute="top" secondItem="lbZ-CT-9sa" secondAttribute="bottom" constant="10" id="wTN-rc-eg4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r20-rT-1ib">
@@ -53,6 +61,7 @@
                     <connections>
                         <outlet property="currentLocationInfomationTableView" destination="wHo-lw-TTS" id="Ccc-mj-lt4"/>
                         <outlet property="currentLocationMapImageView" destination="lbZ-CT-9sa" id="Pcd-Ev-QZd"/>
+                        <outlet property="lottieView" destination="mJv-yA-miw" id="teW-Py-nkV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYi-2Q-QVK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

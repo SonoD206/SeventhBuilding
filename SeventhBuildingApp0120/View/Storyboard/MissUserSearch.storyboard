@@ -20,9 +20,9 @@
                                 <rect key="frame" x="0.0" y="244.5" width="414" height="49"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhL-rB-Hfw">
-                                <rect key="frame" x="103.5" y="566.5" width="207" height="32"/>
+                                <rect key="frame" x="103.5" y="588" width="207" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="22"/>
                                 <state key="normal" title="7号館に向かう">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -30,8 +30,10 @@
                                     <action selector="tappedMoveToMapViewButton:" destination="OGE-Ex-2cH" eventType="touchUpInside" id="b2R-v7-Fi5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本電子専門学校７号館との距離が離れています。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hx-0w-QvO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hx-0w-QvO">
                                 <rect key="frame" x="72.5" y="522.5" width="269" height="30"/>
+                                <string key="text">日本電子専門学校７号館との
+距離が離れています。</string>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +49,7 @@
                             <constraint firstItem="3hx-0w-QvO" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="1.2" id="Ylg-t7-hJF"/>
                             <constraint firstItem="3hx-0w-QvO" firstAttribute="centerX" secondItem="spB-Qk-1fN" secondAttribute="centerX" id="lYy-lR-XDH"/>
                             <constraint firstItem="3hx-0w-QvO" firstAttribute="width" secondItem="7xf-dC-4Wg" secondAttribute="width" multiplier="0.65" id="xRL-Yy-b0W"/>
-                            <constraint firstItem="mhL-rB-Hfw" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="1.3" id="yf7-jS-nzE"/>
+                            <constraint firstItem="mhL-rB-Hfw" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="1.35" id="yf7-jS-nzE"/>
                             <constraint firstItem="1CF-BF-Wme" firstAttribute="centerY" secondItem="spB-Qk-1fN" secondAttribute="centerY" multiplier="0.6" id="z7y-Pv-NHz"/>
                         </constraints>
                     </view>
@@ -57,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTg-W3-pl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337.68115942028987" y="105.80357142857143"/>
+            <point key="canvasLocation" x="-401" y="125"/>
         </scene>
     </scenes>
     <resources>

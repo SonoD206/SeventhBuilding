@@ -35,7 +35,6 @@ class UserPositionSearchViewController: LottieAnimationViewController {
         startLottieAnimation(name: "indicator", mode:.loop)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute:{
-//        MARK: - GPS
             if self.isNearJEC() {
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
                  let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
@@ -85,8 +84,7 @@ extension UserPositionSearchViewController: CLLocationManagerDelegate {
         let location = locations.first
         self.userLatitude  = location?.coordinate.latitude
         self.userLongitude = location?.coordinate.longitude
-        
-        print(userLatitude,userLongitude)
+    
     }
     
     /// 認証ステータスが変更されるタイミングで呼ばれる

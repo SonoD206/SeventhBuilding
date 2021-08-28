@@ -11,6 +11,7 @@ class FloorDetailViewController: UIViewController {
     
     @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var floorDetailTableView: UITableView!
+    @IBOutlet weak var lottieView: SettingLottieView!
     
     var closeCellHeight: CGFloat = 98
     var openCellHeight: CGFloat = 352
@@ -38,10 +39,16 @@ class FloorDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.title = "\(floor.name)F"
         mapImage.image = UIImage(named: "floor\(floor.name)_map")
-        
+        setLottieView()
     }
     
     func initialize(floor: Floor) {
         self.floor = floor
+    }
+    
+    func setLottieView(){
+        if floor.name == "1" || floor.name == "2" || floor.name == "10" {
+            lottieView.isHidden = false
+        }
     }
 }

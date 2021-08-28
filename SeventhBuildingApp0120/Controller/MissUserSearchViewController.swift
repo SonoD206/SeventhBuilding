@@ -19,7 +19,7 @@ class MissUserSearchViewController: LottieAnimationViewController {
         moveToMapViewButton.settingButton()
         
         setLottieAnimation(heightPosition: 0.47)
-        startLottieAnimation(name: "404", mode: .loop)
+        startLottieAnimation(name: "walk", mode: .loop)
     }
     @IBAction private func tappedMoveToMapViewButton(_ sender: UIButton) {
         

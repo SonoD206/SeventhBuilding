@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Lottie
 import CoreLocation
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var currentLocationInfomationTableView: UITableView!
     @IBOutlet private weak var currentLocationMapImageView: UIImageView!
+    
+    @IBOutlet weak var lottieView: SettingLottieView!
+    
     
     var locationManager: CLLocationManager!
     /// ユーザー緯度
@@ -60,6 +64,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        lottieView.loadNib()
         navigationItem.setHidesBackButton(true, animated: animated)
         self.title = "現在地"
     }
@@ -134,6 +139,7 @@ class HomeViewController: UIViewController {
         //2F
         case (0.50 ... 1.50): tmpIndex = 1
             currentLocationMapImageView.image = UIImage(named: "floor2_map")
+            lottieView.isHidden = false
         //3F
         case (1.51 ... 2.50): tmpIndex = 2
             currentLocationMapImageView.image = UIImage(named: "floor3_map")
@@ -158,10 +164,12 @@ class HomeViewController: UIViewController {
         //10F
         case (8.51 ... 9.50): tmpIndex = 9
             currentLocationMapImageView.image = UIImage(named: "floor10_map")
+            lottieView.isHidden = false
         //1F
         default:
             tmpIndex = 0
             currentLocationMapImageView.image = UIImage(named: "floor1_map")
+            lottieView.isHidden = false
         }
         return tmpIndex
     }

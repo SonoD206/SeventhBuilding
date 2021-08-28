@@ -65,6 +65,8 @@
 		7FD8027626CBD7C500B68126 /* HomeTimetableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8027426CBD7C500B68126 /* HomeTimetableTableViewCell.swift */; };
 		7FD8027726CBD7C500B68126 /* HomeTimetableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FD8027526CBD7C500B68126 /* HomeTimetableTableViewCell.xib */; };
 		7FD8028526CBDD1600B68126 /* FloorDetailTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8028426CBDD1600B68126 /* FloorDetailTableViewExtention.swift */; };
+		7FE1018E26D9FE110074F3AA /* SettingLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE1018D26D9FE100074F3AA /* SettingLottieView.swift */; };
+		7FE1019626D9FE2E0074F3AA /* SettingLottieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE1019526D9FE2E0074F3AA /* SettingLottieView.xib */; };
 		7FEB538326C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */; };
 		7FEB538E26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB538D26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift */; };
 		7FEB539326C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEB539226C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift */; };
@@ -163,6 +165,8 @@
 		7FD8027426CBD7C500B68126 /* HomeTimetableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimetableTableViewCell.swift; sourceTree = "<group>"; };
 		7FD8027526CBD7C500B68126 /* HomeTimetableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTimetableTableViewCell.xib; sourceTree = "<group>"; };
 		7FD8028426CBDD1600B68126 /* FloorDetailTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorDetailTableViewExtention.swift; sourceTree = "<group>"; };
+		7FE1018D26D9FE100074F3AA /* SettingLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingLottieView.swift; sourceTree = "<group>"; };
+		7FE1019526D9FE2E0074F3AA /* SettingLottieView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingLottieView.xib; sourceTree = "<group>"; };
 		7FEB538226C1202B00D4D714 /* FloorGuidanceTableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloorGuidanceTableViewExtension.swift; sourceTree = "<group>"; };
 		7FEB538D26C321B700D4D714 /* DepartmentGuidanceSectionLayoutKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGuidanceSectionLayoutKind.swift; sourceTree = "<group>"; };
 		7FEB539226C32D1400D4D714 /* DepartmentGuidanceHeaderTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentGuidanceHeaderTitle.swift; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 		7F5BE8A7269D149B00EAF93D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7FE1018C26D9FDE50074F3AA /* LottieView */,
 				7F25775A26BEC8DA002ADF62 /* Storyboard */,
 				7F25775B26BEC8F4002ADF62 /* Header */,
 				7F5BE8D1269D177000EAF93D /* Cell */,
@@ -426,6 +431,15 @@
 				7FA0A64F26D592150064405F /* Weather */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		7FE1018C26D9FDE50074F3AA /* LottieView */ = {
+			isa = PBXGroup;
+			children = (
+				7FE1018D26D9FE100074F3AA /* SettingLottieView.swift */,
+				7FE1019526D9FE2E0074F3AA /* SettingLottieView.xib */,
+			);
+			path = LottieView;
 			sourceTree = "<group>";
 		};
 		7FF34C8E269D49D90070A9D8 /* Extention */ = {
@@ -562,6 +576,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE1019626D9FE2E0074F3AA /* SettingLottieView.xib in Resources */,
 				7F5BE8CD269D16F300EAF93D /* FloorDetail.storyboard in Resources */,
 				7F621DBF26C025DF00C04BDD /* FloorGuidance.storyboard in Resources */,
 				7FD8027726CBD7C500B68126 /* HomeTimetableTableViewCell.xib in Resources */,
@@ -746,6 +761,7 @@
 				7FD8027626CBD7C500B68126 /* HomeTimetableTableViewCell.swift in Sources */,
 				7FC70BB226D3E0990091BB38 /* Weather.swift in Sources */,
 				7F5BE8BB269D163800EAF93D /* MapViewController.swift in Sources */,
+				7FE1018E26D9FE110074F3AA /* SettingLottieView.swift in Sources */,
 				7F25777126BECE3B002ADF62 /* HomeViewHeaderTitle.swift in Sources */,
 				7F25776B26BECB21002ADF62 /* HomeViewHeader.swift in Sources */,
 				7F25775626BEC6DF002ADF62 /* Reusable.swift in Sources */,
