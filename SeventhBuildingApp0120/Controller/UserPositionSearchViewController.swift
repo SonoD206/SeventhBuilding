@@ -17,10 +17,10 @@ class UserPositionSearchViewController: LottieAnimationViewController {
     /// ユーザー経度
     var userLongitude: Double?
     /// 日本電子の緯度
-    var jecLatitude = 35.698854
+    var jecLatitude = 35.69897305742792
     /// 日本電子の経度
-    var jecLongitude = 139.696603
-
+    var jecLongitude = 139.69655352154984
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,11 +34,11 @@ class UserPositionSearchViewController: LottieAnimationViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         startLottieAnimation(name: "indicator", mode:.loop)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute:{
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5, execute:{
             if self.isNearJEC() {
                 let storyboard = UIStoryboard(name: "Login", bundle: nil)
-                 let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-                 self.show(loginViewController, sender: nil)
+                let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+                self.show(loginViewController, sender: nil)
             } else {
                 let storyboard = UIStoryboard(name: "MissUserSearch", bundle: nil)
                 let missUserSearchViewController = storyboard.instantiateViewController(withIdentifier: "MissUserSearchViewController")
@@ -84,7 +84,7 @@ extension UserPositionSearchViewController: CLLocationManagerDelegate {
         let location = locations.first
         self.userLatitude  = location?.coordinate.latitude
         self.userLongitude = location?.coordinate.longitude
-    
+        
     }
     
     /// 認証ステータスが変更されるタイミングで呼ばれる
