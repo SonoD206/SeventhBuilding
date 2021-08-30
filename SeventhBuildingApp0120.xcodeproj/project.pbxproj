@@ -58,6 +58,7 @@
 		7FA1849F26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */; };
 		7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */; };
 		7FB47FB0269D27C800F0DDF4 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FB47FAE269D27C800F0DDF4 /* success.json */; };
+		7FBD082126DBBD0B00B4D108 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBD082026DBBD0B00B4D108 /* MapKit.framework */; };
 		7FC70BB226D3E0990091BB38 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70BB126D3E0990091BB38 /* Weather.swift */; };
 		7FC70BBA26D3E2250091BB38 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC70BB926D3E2250091BB38 /* Current.swift */; };
 		7FD8026F26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */; };
@@ -158,6 +159,7 @@
 		7FA1849D26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		7FA1849E26A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDepartmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		7FB47FAE269D27C800F0DDF4 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
+		7FBD082026DBBD0B00B4D108 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7FC70BB126D3E0990091BB38 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7FC70BB926D3E2250091BB38 /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		7FD8026D26CBD69D00B68126 /* HomeDepartmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDepartmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBD082126DBBD0B00B4D108 /* MapKit.framework in Frameworks */,
 				835FE08C6970DB85E8D84B8D /* Pods_SeventhBuildingApp0120.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +464,7 @@
 		C542D8084CF51772AAAE9151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7FBD082026DBBD0B00B4D108 /* MapKit.framework */,
 				8B50BDD806729881F63A21D6 /* Pods_SeventhBuildingApp0120.framework */,
 				9F5446AD25091DBF8C227996 /* Pods_SeventhBuildingApp0120_SeventhBuildingApp0120UITests.framework */,
 				5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */,

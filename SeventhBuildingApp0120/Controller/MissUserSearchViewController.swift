@@ -19,8 +19,13 @@ class MissUserSearchViewController: LottieAnimationViewController {
         moveToMapViewButton.settingButton()
         
         setLottieAnimation(heightPosition: 0.47)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
         startLottieAnimation(name: "walk", mode: .loop)
     }
+    
     @IBAction private func tappedMoveToMapViewButton(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Map", bundle: nil)

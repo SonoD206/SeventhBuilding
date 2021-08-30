@@ -1,24 +1,28 @@
 PODS:
+  - FloatingPanel (2.4.0)
   - FoldingCell (5.0.2)
   - lottie-ios (3.2.3)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - FloatingPanel
   - FoldingCell
   - lottie-ios
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - FoldingCell
     - lottie-ios
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
   FoldingCell: f92eb5fb9842319e7cd08c71533c98408b785099
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 7db5473fa41badb2da97379e04649cfb6c0b746d
+PODFILE CHECKSUM: 30172ccf569264d5fb2c3aa60141c08077c1231a
 
 COCOAPODS: 1.10.1
