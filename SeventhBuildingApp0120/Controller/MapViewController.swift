@@ -8,26 +8,27 @@
 import UIKit
 import CoreLocation
 import MapKit
+import FloatingPanel
 
 class MapViewController: UIViewController {
     
     var locationManager: CLLocationManager!
-    /// ユーザー緯度
-    var userLatitude: CLLocationDegrees?
-    /// ユーザー経度
-    var userLongitude: CLLocationDegrees?
     /// 日本電子の緯度
-    let jecLatitude = 35.69897305742792
+    let jecLatitude = 35.69888197640192
     /// 日本電子の経度
-    let jecLongitude = 139.69655352154984
+    let jecLongitude = 139.69659207804926
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var fpc: FloatingPanelController!
+    
+    var halfModalVC: HalfModalViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setLocationManager()
+        setHalfModal()
         mapView.delegate = self
     }
     
@@ -36,9 +37,25 @@ class MapViewController: UIViewController {
         self.title = "７号館に向かう"
     }
     
+    private func setHalfModal(){
+        fpc = FloatingPanelController()
+        fpc.delegate = self
+         
+        halfModalVC = HalfModalViewController.fromStoryboard()
+        fpc.set(contentViewController: halfModalVC)
+        
+        // モーダルを角丸にする
+        let appearance = SurfaceAppearance()
+        appearance.cornerRadius = 20.0
+        fpc.surfaceView.appearance = appearance
+        
+        fpc.addPanel(toParent: self)
+    }
+    
     private func setMapkit(){
         
-        let userPoint = CLLocationCoordinate2DMake(userLatitude ?? jecLatitude, userLongitude ?? jecLongitude)
+        let userPoint = CLLocationCoordinate2DMake(UserPositionSearchViewController.userLatitude ?? jecLatitude,UserPositionSearchViewController.userLongitude ?? jecLongitude)
+    
         let jecPoint = CLLocationCoordinate2DMake(jecLatitude,jecLongitude)
         
         //中心座標：現在地と７号館との２点間の中心
@@ -73,8 +90,10 @@ class MapViewController: UIViewController {
                 return
             }
             let route: MKRoute = response!.routes[0] as MKRoute
-            print("目的地まで \(route.distance)km")
-            print("所要時間 \(Int(route.expectedTravelTime/60))分")
+            self.halfModalVC?.walkingTimeLabel.text = "\(Int(route.expectedTravelTime/60))分"
+            self.halfModalVC?.distanceLabel.text = "\(route.distance)m"
+            
+            print("MapView:\(route.distance)")
             
             // mapViewにルートを描画.
             self.mapView.addOverlay(route.polyline, level: .aboveRoads)
@@ -91,7 +110,7 @@ class MapViewController: UIViewController {
         fromPin.coordinate = userPoint
         toPin.coordinate = jecPoint
         // titleをセット.
-        fromPin.title = "出発地点"
+        fromPin.title = "出発地"
         toPin.title = "目的地"
         // mapViewに追加.
         mapView.addAnnotation(fromPin)
@@ -105,6 +124,10 @@ class MapViewController: UIViewController {
         var minLng = 9999.0;
         var maxLat = -9999.0;
         var maxLng = -9999.0;
+        
+        // ＼(^o^)／
+        //   |  |
+        //  「　　∟
         
         for point in points {
             let lat = point.latitude
@@ -195,10 +218,10 @@ class MapViewController: UIViewController {
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.first
-        self.userLatitude  = location?.coordinate.latitude
-        self.userLongitude = location?.coordinate.longitude
-        
+//        let location = locations.first
+//        UserPositionSearchViewController.userLatitude  = location?.coordinate.latitude
+//        UserPositionSearchViewController.userLongitude = location?.coordinate.longitude
+
         setMapkit()
         ///LocatinManagerを１回だけ呼ぶ
         manager.stopUpdatingLocation()
@@ -221,6 +244,10 @@ extension MapViewController: MKMapViewDelegate {
         routeRenderer.strokeColor = UIColor.systemBlue
         return routeRenderer
     }
+}
+
+extension MapViewController: FloatingPanelControllerDelegate {
+    
 }
 
 

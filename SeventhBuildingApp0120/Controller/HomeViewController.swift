@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 import CoreLocation
+import CoreMotion
 
 class HomeViewController: UIViewController {
     
@@ -15,7 +16,6 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var currentLocationMapImageView: UIImageView!
     
     @IBOutlet weak var lottieView: SettingLottieView!
-    
     
     var locationManager: CLLocationManager!
     /// ユーザー緯度
@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
     static var floors: [Floor] = []
     
     var userCurrentNumIndex = 0
+    
+    private let altimeter = CMAltimeter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +72,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func reloadCurrentButton(_ sender: Any) {
+        getNowPressure()
+        UserDefaults.standard.setValue(self.userPressure, forKey: "userPressure")
         userCurrentNumIndex = getUserCurrent()
+        print(userPressure)
+        print(userCurrentNumIndex)
+        if userCurrentNumIndex == 0 || userCurrentNumIndex == 1 || userCurrentNumIndex == 9 {
+            lottieView.isHidden = false
+        } else {
+            lottieView.isHidden = true
+        }
         self.currentLocationInfomationTableView.reloadData()
     }
     
@@ -127,42 +138,40 @@ class HomeViewController: UIViewController {
         ///少数第三位切り捨て
         let userHeightResult = floor(userHeight * 100) / 100
         
-        print(userHeightResult)
-        
         switch userHeightResult {
         //B2F
         case (-4.00 ... -3.00): tmpIndex = 11
             currentLocationMapImageView.image = UIImage(named: "floorB2_map")
         //B1F
-        case (-2.00 ... -1.00): tmpIndex = 10
+        case (-2.99 ... -2.00): tmpIndex = 10
             currentLocationMapImageView.image = UIImage(named: "floorB1_map")
         //2F
-        case (0.50 ... 1.50): tmpIndex = 1
+        case (0.00 ... 0.99): tmpIndex = 1
             currentLocationMapImageView.image = UIImage(named: "floor2_map")
             lottieView.isHidden = false
         //3F
-        case (1.51 ... 2.50): tmpIndex = 2
+        case (1.00 ... 1.99): tmpIndex = 2
             currentLocationMapImageView.image = UIImage(named: "floor3_map")
         //4F
-        case (2.51 ... 3.50): tmpIndex = 3
+        case (2.00 ... 2.99): tmpIndex = 3
             currentLocationMapImageView.image = UIImage(named: "floor4_map")
         //5F
-        case (3.51 ... 4.50): tmpIndex = 4
+        case (3.00 ... 3.99): tmpIndex = 4
             currentLocationMapImageView.image = UIImage(named: "floor5_map")
         //6F
-        case (4.51 ... 5.50): tmpIndex = 5
+        case (4.00 ... 4.99): tmpIndex = 5
             currentLocationMapImageView.image = UIImage(named: "floor6_map")
         //7F
-        case (5.51 ... 6.50): tmpIndex = 6
+        case (7.00 ... 7.99): tmpIndex = 6
             currentLocationMapImageView.image = UIImage(named: "floor7_map")
         //8F
-        case (6.51 ... 7.50): tmpIndex = 7
+        case (8.00 ... 8.99): tmpIndex = 7
             currentLocationMapImageView.image = UIImage(named: "floor8_map")
         //9F
-        case (7.51 ... 8.50): tmpIndex = 8
+        case (9.00 ... 9.99): tmpIndex = 8
             currentLocationMapImageView.image = UIImage(named: "floor9_map")
         //10F
-        case (8.51 ... 9.50): tmpIndex = 9
+        case (10.00 ... 10.99): tmpIndex = 9
             currentLocationMapImageView.image = UIImage(named: "floor10_map")
             lottieView.isHidden = false
         //1F
@@ -173,6 +182,19 @@ class HomeViewController: UIViewController {
         }
         return tmpIndex
     }
+
+    /// ユーザーがいる位置の気圧
+    private func getNowPressure() {
+        if (CMAltimeter.isRelativeAltitudeAvailable()) {
+            altimeter.startRelativeAltitudeUpdates(to: .main, withHandler: { [self] data, error in
+                if error == nil {
+                    self.userPressure = Double(truncating: data!.pressure) * 10
+                }
+            })
+        }
+    }
+    
+    
     
 }
 extension HomeViewController: CLLocationManagerDelegate {

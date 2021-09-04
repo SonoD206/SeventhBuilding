@@ -68,7 +68,7 @@ class TimetableFoldingCell: FoldingCell {
         firstTimetableTitleLabel.text = department?.timetables?[safe: 0]?.title ?? "イベントはありません"
         firstTimetableOverviewLabel.text = department?.timetables?[safe: 0]?.overview ?? "イベントはありません"
         
-        if department?.classroom != "781"{
+        if department?.classroom != "782"{
             secoundTimetableTitleLabel.text = department?.timetables?[safe: 1]?.title ?? "イベントはありません"
             secoundTimetableOverviewLabel.text = department?.timetables?[safe: 1]?.overview ?? "イベントはありません"
         }

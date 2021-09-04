@@ -8,18 +8,19 @@
 import UIKit
 import Lottie
 import CoreLocation
+import MapKit
 
 class UserPositionSearchViewController: LottieAnimationViewController {
     
     var locationManager: CLLocationManager!
     /// ユーザー緯度
-    var userLatitude: Double?
+    static var userLatitude: CLLocationDegrees?
     /// ユーザー経度
-    var userLongitude: Double?
+    static var userLongitude: CLLocationDegrees?
     /// 日本電子の緯度
-    var jecLatitude = 35.69897305742792
+    let jecLatitude = 35.69888197640192
     /// 日本電子の経度
-    var jecLongitude = 139.69655352154984
+    let jecLongitude = 139.69659207804926
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,7 @@ class UserPositionSearchViewController: LottieAnimationViewController {
         setLocationManager()
         
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -66,11 +67,14 @@ class UserPositionSearchViewController: LottieAnimationViewController {
     }
     
     func isNearJEC() -> Bool {
-        let userLocation: CLLocation = CLLocation(latitude: userLatitude ?? jecLatitude, longitude: userLongitude ?? jecLongitude)
-        let jecLocation: CLLocation = CLLocation(latitude: jecLatitude, longitude: jecLongitude)
-        let distance = jecLocation.distance(from: userLocation)
-        print(distance)
-        if distance < 50.0 {
+        ///直線距離
+        let userPoint: CLLocation = CLLocation(latitude: UserPositionSearchViewController.userLatitude ?? jecLatitude, longitude: UserPositionSearchViewController.userLongitude ?? jecLongitude)
+        
+        let jecPoint: CLLocation = CLLocation(latitude: jecLatitude, longitude: jecLongitude)
+        
+        let distance = jecPoint.distance(from: userPoint)
+        
+        if distance <= 50{
             return true
         } else {
             return false
@@ -81,10 +85,23 @@ class UserPositionSearchViewController: LottieAnimationViewController {
 extension UserPositionSearchViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.first
-        self.userLatitude  = location?.coordinate.latitude
-        self.userLongitude = location?.coordinate.longitude
+                let location = locations.first
+                UserPositionSearchViewController.userLatitude  = location?.coordinate.latitude
+                UserPositionSearchViewController.userLongitude = location?.coordinate.longitude
         
+        ///日本電子前の向こう側
+        //        35.69904007597137, 139.69696172136653
+        //        UserPositionSearchViewController.userLatitude  = 35.69904007597137
+        //        UserPositionSearchViewController.userLongitude = 139.69696172136653
+        
+        ///新宿駅
+        //        35.68978093742226, 139.70057130449362
+        //        UserPositionSearchViewController.userLatitude  = 35.68978093742226
+        //        UserPositionSearchViewController.userLongitude = 139.70057130449362
+        
+        ///Managerを一回だけ呼ぶ
+        manager.stopUpdatingLocation()
+        manager.delegate = nil
     }
     
     /// 認証ステータスが変更されるタイミングで呼ばれる

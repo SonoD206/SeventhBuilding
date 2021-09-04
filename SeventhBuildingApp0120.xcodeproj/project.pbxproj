@@ -39,6 +39,8 @@
 		7F709433269E916B00C04BAC /* MissUserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */; };
 		7F70943E269E919700C04BAC /* MissUserSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F70943D269E919700C04BAC /* MissUserSearch.storyboard */; };
 		7F709456269FF8BA00C04BAC /* LottieAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */; };
+		7F783BCA26DC969000D79E73 /* HalfModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F783BC926DC969000D79E73 /* HalfModal.storyboard */; };
+		7F783BCF26DC972C00D79E73 /* HalfModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F783BCE26DC972C00D79E73 /* HalfModalViewController.swift */; };
 		7F890FAE1623B9845E4889FE /* Pods_SeventhBuildingApp0120Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B279B83E8A88E5065FA30B4 /* Pods_SeventhBuildingApp0120Tests.framework */; };
 		7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */; };
 		7F8DF8EF26CC5C1000AC1EC4 /* TimetableFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */; };
@@ -141,6 +143,8 @@
 		7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissUserSearchViewController.swift; sourceTree = "<group>"; };
 		7F70943D269E919700C04BAC /* MissUserSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MissUserSearch.storyboard; sourceTree = "<group>"; };
 		7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimationViewController.swift; sourceTree = "<group>"; };
+		7F783BC926DC969000D79E73 /* HalfModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HalfModal.storyboard; sourceTree = "<group>"; };
+		7F783BCE26DC972C00D79E73 /* HalfModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalViewController.swift; sourceTree = "<group>"; };
 		7F8DF8BD26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationInfomationTableViewExtention.swift; sourceTree = "<group>"; };
 		7F8DF8ED26CC5C1000AC1EC4 /* TimetableFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableFoldingCell.swift; sourceTree = "<group>"; };
 		7F8DF8EE26CC5C1000AC1EC4 /* TimetableFoldingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimetableFoldingCell.xib; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				7F70943D269E919700C04BAC /* MissUserSearch.storyboard */,
 				7F621DBE26C025DF00C04BDD /* FloorGuidance.storyboard */,
 				7F621DC826C0268000C04BDD /* DepartmentGuidance.storyboard */,
+				7F783BC926DC969000D79E73 /* HalfModal.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				7F5BE8C7269D16DF00EAF93D /* FloorDetailViewController.swift */,
 				7F709432269E916B00C04BAC /* MissUserSearchViewController.swift */,
 				7F5BE8BA269D163800EAF93D /* MapViewController.swift */,
+				7F783BCE26DC972C00D79E73 /* HalfModalViewController.swift */,
 				7F709455269FF8BA00C04BAC /* LottieAnimationViewController.swift */,
 			);
 			path = Controller;
@@ -595,6 +601,7 @@
 				7FD8027026CBD69D00B68126 /* HomeDepartmentTableViewCell.xib in Resources */,
 				7F994B2426D95D65003A5820 /* walk.json in Resources */,
 				7FA184A026A3192700DA9A50 /* HomeDepartmentCollectionViewCell.xib in Resources */,
+				7F783BCA26DC969000D79E73 /* HalfModal.storyboard in Resources */,
 				7F8DF8F026CC5C1000AC1EC4 /* TimetableFoldingCell.xib in Resources */,
 				7F621DC926C0268000C04BDD /* DepartmentGuidance.storyboard in Resources */,
 				7FA1847C26A17AE200DA9A50 /* HomeCatalog.storyboard in Resources */,
@@ -734,6 +741,7 @@
 				7FA0A66026D595860064405F /* NetworkManager.swift in Sources */,
 				7FA0A65926D593E70064405F /* Timetable.swift in Sources */,
 				7F8DF8BE26CC4B2D00AC1EC4 /* CurrentLocationInfomationTableViewExtention.swift in Sources */,
+				7F783BCF26DC972C00D79E73 /* HalfModalViewController.swift in Sources */,
 				7FC70BBA26D3E2250091BB38 /* Current.swift in Sources */,
 				7FF34C98269D83740070A9D8 /* ButtonExtension.swift in Sources */,
 				7F26CA8526C547B70004624C /* FloorDetailCollectionViewExtention.swift in Sources */,
