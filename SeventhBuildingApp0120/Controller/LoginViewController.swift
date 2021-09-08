@@ -33,6 +33,8 @@ class LoginViewController: LottieAnimationViewController {
         }
         
         urlCompornents.queryItems = [
+//            URLQueryItem(name: "lat", value: "35.70729317048879"),
+//            URLQueryItem(name: "lon", value: "139.65236801616297"),
             URLQueryItem(name: "lat", value: "35.69885661199422"),
             URLQueryItem(name: "lon", value: "139.69652530835802"),
             URLQueryItem(name: "lang", value: "ja"),

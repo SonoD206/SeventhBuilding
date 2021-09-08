@@ -17,12 +17,6 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var lottieView: SettingLottieView!
     
-    var locationManager: CLLocationManager!
-    /// ユーザー緯度
-    var userLatitude: Double?
-    /// ユーザー経度
-    var userLongitude: Double?
-    
     ///WeatherAPIで取った今の気温
     var weatherNowTemp: Double?
     ///WeatherAPIで取った今の気圧
@@ -43,6 +37,8 @@ class HomeViewController: UIViewController {
     var userCurrentNumIndex = 0
     
     private let altimeter = CMAltimeter()
+    
+    var errorAlertController: UIAlertController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,8 +71,10 @@ class HomeViewController: UIViewController {
         getNowPressure()
         UserDefaults.standard.setValue(self.userPressure, forKey: "userPressure")
         userCurrentNumIndex = getUserCurrent()
+        
         print(userPressure)
         print(userCurrentNumIndex)
+        
         if userCurrentNumIndex == 0 || userCurrentNumIndex == 1 || userCurrentNumIndex == 9 {
             lottieView.isHidden = false
         } else {
@@ -97,26 +95,6 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    
-    /// CLLocationManagerの設定
-    private func setLocationManager(){
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        checkLocationAuthorization()
-    }
-    
-    /// 位置情報の認証状態を確認する
-    private func checkLocationAuthorization() {
-        switch locationManager.authorizationStatus {
-        case .authorizedWhenInUse, .authorizedAlways:
-            locationManager.startUpdatingLocation()
-        case .denied, .notDetermined, .restricted:
-            locationManager.requestWhenInUseAuthorization()
-        @unknown default:
-            fatalError()
-        }
-    }
-    
     /// ユーザーが何階にいるか
     /// - Returns: フロアの配列のIndex番号
     func getUserCurrent() -> Int {
@@ -127,7 +105,6 @@ class HomeViewController: UIViewController {
         let temp3 = temp1 * temp2
         
         let userHeight = ((temp3 / 0.0065) - 34) / 3.3
-        
         userCurrentNumIndex = getCurrentFloor(userHeight: userHeight)
         
         return userCurrentNumIndex
@@ -140,20 +117,24 @@ class HomeViewController: UIViewController {
         
         switch userHeightResult {
         //B2F
-        case (-4.00 ... -3.00): tmpIndex = 11
+        case (-3.50 ... -3.00): tmpIndex = 11
             currentLocationMapImageView.image = UIImage(named: "floorB2_map")
         //B1F
-        case (-2.99 ... -2.00): tmpIndex = 10
+        case (-2.50 ... -1.50): tmpIndex = 10
             currentLocationMapImageView.image = UIImage(named: "floorB1_map")
+        //1F
+        case (-1.00 ... -0.01): tmpIndex = 0
+            currentLocationMapImageView.image = UIImage(named: "floor1_map")
+            lottieView.isHidden = false
         //2F
         case (0.00 ... 0.99): tmpIndex = 1
             currentLocationMapImageView.image = UIImage(named: "floor2_map")
             lottieView.isHidden = false
         //3F
-        case (1.00 ... 1.99): tmpIndex = 2
+        case (1.00 ... 1.50): tmpIndex = 2
             currentLocationMapImageView.image = UIImage(named: "floor3_map")
         //4F
-        case (2.00 ... 2.99): tmpIndex = 3
+        case (1.51 ... 2.99): tmpIndex = 3
             currentLocationMapImageView.image = UIImage(named: "floor4_map")
         //5F
         case (3.00 ... 3.99): tmpIndex = 4
@@ -174,15 +155,17 @@ class HomeViewController: UIViewController {
         case (10.00 ... 10.99): tmpIndex = 9
             currentLocationMapImageView.image = UIImage(named: "floor10_map")
             lottieView.isHidden = false
-        //1F
+        //該当Floorがない時
         default:
             tmpIndex = 0
             currentLocationMapImageView.image = UIImage(named: "floor1_map")
             lottieView.isHidden = false
+            errorAlert(title: "現在地の取得に失敗",
+                       message: "正確に現在地を取得できませんでした。")
         }
         return tmpIndex
     }
-
+    
     /// ユーザーがいる位置の気圧
     private func getNowPressure() {
         if (CMAltimeter.isRelativeAltitudeAvailable()) {
@@ -194,20 +177,13 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
-    
-}
-extension HomeViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations.first
-        self.userLatitude  = location?.coordinate.latitude
-        self.userLongitude = location?.coordinate.longitude
+    func errorAlert(title:String, message:String) {
+        errorAlertController = UIAlertController(title: title,
+                                                 message: message,
+                                                 preferredStyle: .alert)
+        errorAlertController.addAction(UIAlertAction(title: "OK",
+                                                     style: .default,
+                                                     handler: nil))
+        present(errorAlertController, animated: true)
     }
-    
-    /// 認証ステータスが変更されるタイミングで呼ばれる
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        checkLocationAuthorization()
-    }
-    
 }

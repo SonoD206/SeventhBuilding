@@ -218,10 +218,6 @@ class MapViewController: UIViewController {
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        let location = locations.first
-//        UserPositionSearchViewController.userLatitude  = location?.coordinate.latitude
-//        UserPositionSearchViewController.userLongitude = location?.coordinate.longitude
-
         setMapkit()
         ///LocatinManagerを１回だけ呼ぶ
         manager.stopUpdatingLocation()

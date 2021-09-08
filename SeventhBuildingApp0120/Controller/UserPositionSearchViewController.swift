@@ -85,20 +85,10 @@ class UserPositionSearchViewController: LottieAnimationViewController {
 extension UserPositionSearchViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-                let location = locations.first
-                UserPositionSearchViewController.userLatitude  = location?.coordinate.latitude
-                UserPositionSearchViewController.userLongitude = location?.coordinate.longitude
         
-        ///日本電子前の向こう側
-        //        35.69904007597137, 139.69696172136653
-        //        UserPositionSearchViewController.userLatitude  = 35.69904007597137
-        //        UserPositionSearchViewController.userLongitude = 139.69696172136653
-        
-        ///新宿駅
-        //        35.68978093742226, 139.70057130449362
-        //        UserPositionSearchViewController.userLatitude  = 35.68978093742226
-        //        UserPositionSearchViewController.userLongitude = 139.70057130449362
-        
+        let location = locations.first
+        UserPositionSearchViewController.userLatitude  = location?.coordinate.latitude
+        UserPositionSearchViewController.userLongitude = location?.coordinate.longitude
         ///Managerを一回だけ呼ぶ
         manager.stopUpdatingLocation()
         manager.delegate = nil
